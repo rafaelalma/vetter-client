@@ -18,5 +18,7 @@ describe("LocalStorage", () => {
     expect(localStorage.getItem("key")).toBeNull();
   });
 
-  xit("should clear values", () => {});
+  xit("should clear values", () => {
+    // TODO
+  });
 });
