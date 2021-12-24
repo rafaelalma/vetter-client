@@ -33,6 +33,8 @@ Tested in `Mozilla Firefox v94.0` for Ubuntu (development and production builds)
 
 [SASS](https://sass-lang.com/)
 
+[clsx](https://www.npmjs.com/package/clsx)
+
 ### Create React App
 
 Project bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
