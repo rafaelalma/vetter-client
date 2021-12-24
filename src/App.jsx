@@ -1,8 +1,10 @@
 import React from "react";
 import "./App.scss";
 
-function App() {
-  return <p>Cleanedup React App</p>;
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Vetter</h1>
+    </div>
+  );
 }
-
-export default App;
