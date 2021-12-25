@@ -1,17 +1,9 @@
+import { fireEvent, render, screen } from "@testing-library/react";
+import { useContext } from "react";
 import {
   AuthenticationContext,
   AuthenticationProvider,
 } from "./AuthenticationContext";
-import { useContext } from "react";
-import { fireEvent, render, screen } from "@testing-library/react";
-
-function AuthenticationConsumerWrapper() {
-  return (
-    <AuthenticationProvider>
-      <AuthenticationConsumer />
-    </AuthenticationProvider>
-  );
-}
 
 function AuthenticationConsumer() {
   const context = useContext(AuthenticationContext);
@@ -30,12 +22,12 @@ function AuthenticationConsumer() {
 
 describe("AuthenticationContext", () => {
   it("should provide authentication context", () => {
-    render(<AuthenticationConsumerWrapper />);
+    render(<AuthenticationConsumer />, { wrapper: AuthenticationProvider });
     expect(screen.getByText("false")).toBeInTheDocument();
   });
 
   it("should provide authentication updating", () => {
-    render(<AuthenticationConsumerWrapper />);
+    render(<AuthenticationConsumer />, { wrapper: AuthenticationProvider });
     const button = screen.getByRole("button");
     fireEvent.click(button);
     expect(screen.getByText("true")).toBeInTheDocument();
