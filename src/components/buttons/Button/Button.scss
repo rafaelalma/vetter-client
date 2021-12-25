@@ -11,6 +11,10 @@
   transition: background-color 200ms, color 200ms;
 }
 
+.btn-small {
+  padding: 7px 20px;
+}
+
 .btn-default {
   color: $white;
   background-color: $primary-1;
@@ -42,5 +46,27 @@
 .btn-outline[disabled] {
   color: $primary-4;
   background-color: $primary-5;
+  cursor: default;
+}
+
+.btn-accent {
+  color: $white;
+  background-color: $accent-1;
+}
+
+.btn-accent:hover {
+  color: $white;
+  background-color: $accent-2;
+  text-decoration: none;
+}
+
+.btn-accent:active {
+  color: $accent-1;
+  background-color: $accent-4;
+}
+
+.btn-accent[disabled] {
+  color: $accent-4;
+  background-color: $accent-5;
   cursor: default;
 }
