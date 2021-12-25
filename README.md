@@ -41,6 +41,8 @@ Tested in `Mozilla Firefox v94.0` for Ubuntu (development and production builds)
 
 [clsx](https://www.npmjs.com/package/clsx)
 
+[React Router](https://reactrouter.com/)
+
 ### Create React App
 
 Project bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
