@@ -1,0 +1,19 @@
+@import "../../styles/settings";
+
+.Header {
+  padding: $spacing-2;
+  background-color: $primary-1;
+}
+
+.header-navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: $spacing-1;
+}
+
+.header-title {
+  font-size: 32px;
+}
