@@ -1,7 +1,7 @@
-@import "../../../styles.scss";
+@import "../../../styles/styles";
 
 .input-required {
-  color: $primary-1; // primary-2
+  color: $primary-2;
   text-decoration: none;
   font-weight: bold;
   padding: 0 1px;
@@ -19,13 +19,13 @@
   padding: 0.75em 0.5em;
   min-width: 200px;
   border: none;
-  border-left: 7px solid $primary-1; // neutral-4
+  border-left: 7px solid $neutral-4;
   transition: border-left-color 160ms;
   background-color: $white;
 }
 
 ::placeholder {
-  color: $primary-1; // neutral-4
+  color: $neutral-4;
 }
 
 input:focus {

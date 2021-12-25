@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "../../../styles/styles";
 
 .btn {
   border-radius: 3px;
@@ -18,7 +18,7 @@
 
 .btn-outline {
   color: $primary-1;
-  background-color: $white; // primary-4
+  background-color: $primary-4;
   border: $primary-1 2px solid;
   box-shadow: 1px 1px 7px #c4c4c4c4;
   padding: 8px 25px;
@@ -28,19 +28,19 @@
 .btn-default:hover,
 .btn-outline:hover {
   color: $white;
-  background-color: $primary-1; // primary-2
+  background-color: $primary-2;
   text-decoration: none;
 }
 
 .btn-default:active,
 .btn-outline:active {
   color: $primary-1;
-  background-color: $white; // primary-4
+  background-color: $primary-4;
 }
 
 .btn-default[disabled],
 .btn-outline[disabled] {
-  color: $white; // primary-4
-  background-color: $black; // primary-5
+  color: $primary-4;
+  background-color: $primary-5;
   cursor: default;
 }
