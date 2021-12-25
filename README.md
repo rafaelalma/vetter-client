@@ -23,6 +23,12 @@ npm install
 npm start
 ```
 
+## Styles
+
+### Font
+
+[Nunito](https://fonts.google.com/specimen/Nunito)
+
 ## Info
 
 Tested with `Node.js v16.13.1 LTS` and `npm version 8.3.0`
