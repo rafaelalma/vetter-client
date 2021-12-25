@@ -1,7 +1,7 @@
 import "./Button.scss";
 import clsx from "clsx";
 
-export default function Button(props) {
+export function Button(props) {
   const { children, outline, className, ...rest } = props;
 
   const classNames = clsx(
