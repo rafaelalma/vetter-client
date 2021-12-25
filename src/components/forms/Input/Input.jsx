@@ -1,5 +1,5 @@
-import "./Input.scss";
 import clsx from "clsx";
+import "./Input.scss";
 
 export function Input(props) {
   const { className, placeholder, required, type = "text", ...rest } = props;

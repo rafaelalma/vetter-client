@@ -1,5 +1,5 @@
-import "./Button.scss";
 import clsx from "clsx";
+import "./Button.scss";
 
 export function Button(props) {
   const { children, outline, className, ...rest } = props;
