@@ -1,17 +1,22 @@
-import { useState, createContext } from "react";
+import { createContext, useState } from "react";
 
 const AuthenticationContext = createContext();
 
 function AuthenticationProvider(props) {
   const [authentication, setAuthentication] = useState(false);
 
-  function authenticate() {
+  function login() {
     setAuthentication(true);
+  }
+
+  function logout() {
+    setAuthentication(false);
   }
 
   const value = {
     authentication,
-    authenticate,
+    login,
+    logout,
   };
 
   return (

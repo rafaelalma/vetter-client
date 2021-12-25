@@ -8,14 +8,19 @@ import {
 function AuthenticationConsumer() {
   const context = useContext(AuthenticationContext);
 
-  const handleAuthentication = () => {
-    context.authenticate();
+  const handleLoginClick = () => {
+    context.login();
+  };
+
+  const handleLogoutClick = () => {
+    context.logout();
   };
 
   return (
     <>
       {context.authentication.toString()}
-      <button onClick={handleAuthentication}>Authenticate</button>
+      <button onClick={handleLoginClick}>Login</button>
+      <button onClick={handleLogoutClick}>Logout</button>
     </>
   );
 }
@@ -26,10 +31,17 @@ describe("AuthenticationContext", () => {
     expect(screen.getByText("false")).toBeInTheDocument();
   });
 
-  it("should provide authentication updating", () => {
+  it("should provide login", () => {
     render(<AuthenticationConsumer />, { wrapper: AuthenticationProvider });
-    const button = screen.getByRole("button");
+    const button = screen.getByRole("button", { name: "Login" });
     fireEvent.click(button);
     expect(screen.getByText("true")).toBeInTheDocument();
+  });
+
+  it("should provide logout", () => {
+    render(<AuthenticationConsumer />, { wrapper: AuthenticationProvider });
+    const button = screen.getByRole("button", { name: "Logout" });
+    fireEvent.click(button);
+    expect(screen.getByText("false")).toBeInTheDocument();
   });
 });
