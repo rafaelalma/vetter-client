@@ -31,6 +31,7 @@ export default function App() {
               <Route path="categories" element={null} />
               <Route path="search" element={null} />
             </Route>
+            <Route path="*" element={null} />
           </Routes>
         </BrowserRouter>
       </AuthenticationProvider>
