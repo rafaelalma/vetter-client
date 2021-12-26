@@ -7,14 +7,18 @@ export default function MedicinesPage() {
       <nav>
         <ul className="medicines-page-navigation">
           <li>
-            <NavLink className="link-accent" to="/medicines/categories">
-              Categories
-            </NavLink>
+            <h2>
+              <NavLink className="link-accent" to="/medicines/categories">
+                Categories
+              </NavLink>
+            </h2>
           </li>
           <li>
-            <NavLink className="link-accent" to="/medicines/search">
-              Search
-            </NavLink>
+            <h2>
+              <NavLink className="link-accent" to="/medicines/search">
+                Search
+              </NavLink>
+            </h2>
           </li>
         </ul>
       </nav>
