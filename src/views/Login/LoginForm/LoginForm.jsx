@@ -18,7 +18,7 @@ export default function LoginForm() {
 
     // TODO: backend
 
-    context.authenticate();
+    context.login();
 
     navigate("/dashboard");
   };

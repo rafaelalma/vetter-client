@@ -42,7 +42,7 @@ describe("LoginForm", () => {
     // TODO
   });
 
-  xit("should authenticate if valid user", () => {
+  xit("should login if valid user", () => {
     // TODO
   });
 
