@@ -1,2 +1,10 @@
+@import "styles/settings/spacing";
+@import "styles/settings/colors";
+
 .PatientCard {
+  padding: $spacing-1;
+  border: 2px solid $primary-1;
+  background-color: $white;
+  border-radius: 3px;
+  text-align: center;
 }
