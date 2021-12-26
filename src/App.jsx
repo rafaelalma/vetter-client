@@ -8,6 +8,7 @@ import PatientsList from "./views/Dashboard/PatientsList/PatientsList";
 import ForgotPasswordPage from "./views/ForgotPassword/ForgotPasswordPage";
 import LoginPage from "./views/Login/LoginPage";
 import MedicinesPage from "./views/Medicines/MedicinesPage";
+import SearchForm from "./views/Medicines/SearchForm/SearchForm";
 import SignUpPage from "./views/SignUp/SignUpPage";
 
 export default function App() {
@@ -29,7 +30,7 @@ export default function App() {
             <Route path="/medicines" element={<MedicinesPage />}>
               <Route index element={null} />
               <Route path="categories" element={null} />
-              <Route path="search" element={null} />
+              <Route path="search" element={<SearchForm />} />
             </Route>
             <Route path="*" element={null} />
           </Routes>
