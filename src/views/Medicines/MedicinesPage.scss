@@ -1,0 +1,10 @@
+@import "styles/settings/spacing";
+
+.medicines-page-navigation {
+  padding: $spacing-2;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: $spacing-1;
+}
