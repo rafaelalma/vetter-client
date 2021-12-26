@@ -1,0 +1,75 @@
+{
+  "owners": [
+    {
+      "id": 1,
+      "first_name": "Alicia",
+      "last_name": "Lamarca",
+      "email": "alicialamarca@gmail.com",
+      "phone": "679664632"
+    },
+    {
+      "id": 2,
+      "first_name": "Rafael",
+      "last_name": "Álvarez",
+      "email": "rafaelalma92@gmail.com",
+      "phone": "629664628"
+    },
+    {
+      "id": 3,
+      "first_name": "Antonio",
+      "last_name": "López",
+      "email": "antolo@gmail.com",
+      "phone": "629663328"
+    }
+  ],
+  "patients": [
+    {
+      "id": 1,
+      "owner_id": 1,
+      "name": "Leo",
+      "birth_date": "2015-08-10",
+      "species": "dog",
+      "breed": "pinscher",
+      "color": "black and brown",
+      "vaccination_status": "current",
+      "gender": "male",
+      "spayed_or_neutered": "no"
+    },
+    {
+      "id": 2,
+      "owner_id": 2,
+      "name": "Alpha",
+      "birth_date": "2019-09-10",
+      "species": "dog",
+      "breed": "dobermann",
+      "color": "black and brown",
+      "vaccination_status": "current",
+      "gender": "male",
+      "spayed_or_neutered": "no"
+    },
+    {
+      "id": 3,
+      "owner_id": 3,
+      "name": "Fify",
+      "birth_date": "2020-12-13",
+      "species": "cat",
+      "breed": "unsure",
+      "color": "brown",
+      "vaccination_status": "past due",
+      "gender": "female",
+      "spayed_or_neutered": "spayed"
+    },
+    {
+      "id": 4,
+      "owner_id": 3,
+      "name": "Fofo",
+      "birth_date": "2018-01-02",
+      "species": "cat",
+      "breed": "unsure",
+      "color": "white",
+      "vaccination_status": "current",
+      "gender": "male",
+      "spayed_or_neutered": "neutered"
+    }
+  ]
+}
