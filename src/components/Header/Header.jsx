@@ -1,10 +1,15 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthenticationContext } from "../../context/authentication/AuthenticationContext";
+import { Button } from "../buttons";
 import "./Header.scss";
 
 export default function Header() {
   const context = useContext(AuthenticationContext);
+
+  const handleLogoutClick = () => {
+    context.logout();
+  };
 
   const loggedOutLinks = (
     <>
@@ -25,6 +30,9 @@ export default function Header() {
       <li>
         <NavLink to="/medicines">Medicines</NavLink>
       </li>
+      <Button className="btn-accent btn-small" onClick={handleLogoutClick}>
+        X
+      </Button>
     </>
   );
 

@@ -20,14 +20,19 @@ function Wrapper() {
 function AuthenticationConsumer() {
   const context = useContext(AuthenticationContext);
 
-  const handleAuthentication = () => {
-    context.authenticate();
+  const handleLoginClick = () => {
+    context.login();
+  };
+
+  const handleLogoutClick = () => {
+    context.logout();
   };
 
   return (
     <>
       <Header />
-      <button onClick={handleAuthentication}>Authenticate</button>
+      <button onClick={handleLoginClick}>Login</button>
+      <button onClick={handleLogoutClick}>Logout</button>
     </>
   );
 }
@@ -40,13 +45,15 @@ describe("Header", () => {
 
   it("should render Login and Sign Up links if the user is not logged in", () => {
     render(<Header />, { wrapper: Wrapper });
+    const button = screen.getByRole("button", { name: "Logout" });
+    fireEvent.click(button);
     expect(screen.getByRole("link", { name: "Login" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Sign Up" })).toBeInTheDocument();
   });
 
   it("should render Dashboard and Medicines links if the user is logged in", () => {
     render(<Header />, { wrapper: Wrapper });
-    const button = screen.getByRole("button");
+    const button = screen.getByRole("button", { name: "Login" });
     fireEvent.click(button);
     expect(screen.getByRole("link", { name: "Dashboard" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Medicines" })).toBeInTheDocument();
