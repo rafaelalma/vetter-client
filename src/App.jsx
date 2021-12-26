@@ -7,6 +7,7 @@ import DashboardPage from "./views/Dashboard/DashboardPage";
 import PatientsList from "./views/Dashboard/PatientsList/PatientsList";
 import ForgotPasswordPage from "./views/ForgotPassword/ForgotPasswordPage";
 import LoginPage from "./views/Login/LoginPage";
+import MedicinesPage from "./views/Medicines/MedicinesPage";
 import SignUpPage from "./views/SignUp/SignUpPage";
 
 export default function App() {
@@ -25,7 +26,11 @@ export default function App() {
               <Route path="patients" element={<PatientsList />} />
               <Route path="saved-medicines" element={null} />
             </Route>
-            <Route path="/medicines" element={null} />
+            <Route path="/medicines" element={<MedicinesPage />}>
+              <Route index element={null} />
+              <Route path="categories" element={null} />
+              <Route path="search" element={null} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </AuthenticationProvider>
