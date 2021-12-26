@@ -1,14 +1,18 @@
 import { Button } from "components/buttons";
 import { AuthenticationContext } from "context/authentication/AuthenticationContext";
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header() {
   const context = useContext(AuthenticationContext);
 
+  const navigate = useNavigate();
+
   const handleLogoutClick = () => {
     context.logout();
+
+    navigate("/");
   };
 
   const loggedOutLinks = (
