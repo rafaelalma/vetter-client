@@ -11,13 +11,26 @@
   transition: background-color 200ms, color 200ms;
 }
 
-.btn-small {
-  padding: 7px 20px;
-}
-
 .btn-default {
   color: $white;
   background-color: $primary-1;
+
+  &:hover {
+    color: $white;
+    background-color: $primary-2;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $primary-1;
+    background-color: $primary-4;
+  }
+
+  &:disabled {
+    color: $primary-4;
+    background-color: $primary-5;
+    cursor: default;
+  }
 }
 
 .btn-outline {
@@ -27,46 +40,47 @@
   box-shadow: 1px 1px 7px #c4c4c4c4;
   padding: 8px 25px;
   border-radius: 10px;
-}
 
-.btn-default:hover,
-.btn-outline:hover {
-  color: $white;
-  background-color: $primary-2;
-  text-decoration: none;
-}
+  &:hover {
+    color: $white;
+    background-color: $primary-2;
+    text-decoration: none;
+  }
 
-.btn-default:active,
-.btn-outline:active {
-  color: $primary-1;
-  background-color: $primary-4;
-}
+  &:active {
+    color: $primary-1;
+    background-color: $primary-4;
+  }
 
-.btn-default[disabled],
-.btn-outline[disabled] {
-  color: $primary-4;
-  background-color: $primary-5;
-  cursor: default;
+  &:disabled {
+    color: $primary-4;
+    background-color: $primary-5;
+    cursor: default;
+  }
 }
 
 .btn-accent {
   color: $white;
   background-color: $accent-1;
+
+  &:hover {
+    color: $white;
+    background-color: $accent-2;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $accent-1;
+    background-color: $accent-4;
+  }
+
+  &:disabled {
+    color: $accent-4;
+    background-color: $accent-5;
+    cursor: default;
+  }
 }
 
-.btn-accent:hover {
-  color: $white;
-  background-color: $accent-2;
-  text-decoration: none;
-}
-
-.btn-accent:active {
-  color: $accent-1;
-  background-color: $accent-4;
-}
-
-.btn-accent[disabled] {
-  color: $accent-4;
-  background-color: $accent-5;
-  cursor: default;
+.btn-small {
+  padding: 7px 20px;
 }
