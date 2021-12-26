@@ -16,7 +16,7 @@ export default function SignUpForm() {
   };
 
   return (
-    <form className="SignUp" onSubmit={handleSignUpSubmit}>
+    <form className="SignUpForm" onSubmit={handleSignUpSubmit}>
       <Input
         placeholder="First Name"
         required
