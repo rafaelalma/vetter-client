@@ -1,0 +1,38 @@
+@import "./settings/colors";
+@import "./settings/fonts";
+
+// Basic styles that will be applied to every page. It’s a good place to put reset/normalize code.
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: 16px;
+  color: $neutral-1;
+  background-color: $neutral-5;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+
+  &.link-accent {
+    color: $accent-1;
+  }
+
+  &.active {
+    font-weight: bold;
+  }
+}
+
+input {
+  font-family: inherit;
+
+  &:autofill {
+    background: $primary-5;
+  }
+}
