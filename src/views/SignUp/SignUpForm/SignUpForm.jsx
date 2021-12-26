@@ -1,6 +1,6 @@
+import { Button } from "components/buttons";
+import { Input } from "components/forms";
 import { useState } from "react";
-import { Button } from "../../../components/buttons";
-import { Input } from "../../../components/forms";
 import "./SignUpForm.scss";
 
 export default function SignUpForm() {

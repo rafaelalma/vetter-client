@@ -1,10 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { useContext } from "react";
-import { BrowserRouter } from "react-router-dom";
 import {
   AuthenticationContext,
   AuthenticationProvider,
-} from "../../context/authentication/AuthenticationContext";
+} from "context/authentication/AuthenticationContext";
+import { useContext } from "react";
+import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
 
 function Wrapper() {

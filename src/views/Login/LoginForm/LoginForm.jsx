@@ -1,8 +1,8 @@
+import { Button } from "components/buttons";
+import { Input } from "components/forms";
+import { AuthenticationContext } from "context/authentication/AuthenticationContext";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../../components/buttons";
-import { Input } from "../../../components/forms";
-import { AuthenticationContext } from "../../../context/authentication/AuthenticationContext";
 import "./LoginForm.scss";
 
 export default function LoginForm() {

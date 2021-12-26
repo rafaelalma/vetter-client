@@ -1,7 +1,7 @@
+import { Button } from "components/buttons";
+import { AuthenticationContext } from "context/authentication/AuthenticationContext";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { AuthenticationContext } from "../../context/authentication/AuthenticationContext";
-import { Button } from "../buttons";
 import "./Header.scss";
 
 export default function Header() {
