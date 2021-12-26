@@ -6,8 +6,7 @@ export default function LoginPage() {
   return (
     <>
       <LoginForm />
-      {/* TODO: component */}
-      <div className="ForgotPasswordLink">
+      <div className="login-page-forgot-password-link">
         <NavLink className="link-accent" to="/forgot-password">
           Forgot your password?
         </NavLink>
