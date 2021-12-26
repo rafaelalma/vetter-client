@@ -1,4 +1,4 @@
-import { capitalize } from "./stringFormatting";
+import { capitalize } from "./stringFormatting.helpers";
 
 describe("capitalize", () => {
   it("should capitalize all lowercase string", () => {
