@@ -1,0 +1,9 @@
+@import "styles/settings";
+
+.buttons {
+  padding: $spacing-2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-2;
+}
