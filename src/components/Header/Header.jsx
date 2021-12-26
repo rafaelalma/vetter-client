@@ -34,24 +34,26 @@ export default function Header() {
       <li>
         <NavLink to="/medicines">Medicines</NavLink>
       </li>
-      <Button className="btn-accent btn-small" onClick={handleLogoutClick}>
-        X
-      </Button>
     </>
   );
 
   return (
     <header className="Header">
-      <nav>
-        <ul className="header-navigation">
-          <li>
-            <NavLink to="/">
-              <h1 className="header-title">Vetter</h1>
-            </NavLink>
-          </li>
-          {context.authentication ? loggedInLinks : loggedOutLinks}
-        </ul>
-      </nav>
+      <div>
+        <h1>
+          <NavLink to="/">Vetter</NavLink>
+        </h1>
+        <nav>
+          <ul className="header-navigation">
+            {context.authentication ? loggedInLinks : loggedOutLinks}
+          </ul>
+        </nav>
+      </div>
+      {context.authentication && (
+        <Button className="btn-accent btn-small" onClick={handleLogoutClick}>
+          X
+        </Button>
+      )}
     </header>
   );
 }
