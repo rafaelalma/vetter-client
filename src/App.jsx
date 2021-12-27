@@ -4,7 +4,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import { AuthenticationProvider } from "./context/authentication/AuthenticationContext";
 import DashboardPage from "./views/Dashboard/DashboardPage";
-import PatientsList from "./views/Dashboard/PatientsList/PatientsList";
+import PatientsList from "./views/Dashboard/Patients/PatientsList/PatientsList";
 import ForgotPasswordPage from "./views/ForgotPassword/ForgotPasswordPage";
 import LoginPage from "./views/Login/LoginPage";
 import MedicinesPage from "./views/Medicines/MedicinesPage";
