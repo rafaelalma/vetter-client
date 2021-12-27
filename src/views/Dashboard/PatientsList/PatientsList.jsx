@@ -12,7 +12,7 @@ export default function PatientsList() {
     (async () => {
       try {
         const data = await get("patients");
-        console.log(data);
+        console.log("Patients", data);
 
         setPatients(data);
       } catch (error) {
