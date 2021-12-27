@@ -37,6 +37,10 @@ a {
     color: $accent-1;
   }
 
+  &.link-primary {
+    color: $primary-1;
+  }
+
   &.active {
     font-weight: bold;
   }
