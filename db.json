@@ -24,7 +24,7 @@
   ],
   "patients": [
     {
-      "id": 1,
+      "id": 0,
       "owner_id": 1,
       "name": "Leo",
       "birth_date": "2015-08-10",
@@ -36,7 +36,7 @@
       "spayed_or_neutered": "no"
     },
     {
-      "id": 2,
+      "id": 1,
       "owner_id": 2,
       "name": "Alpha",
       "birth_date": "2019-09-10",
@@ -48,7 +48,7 @@
       "spayed_or_neutered": "no"
     },
     {
-      "id": 3,
+      "id": 2,
       "owner_id": 3,
       "name": "Fify",
       "birth_date": "2020-12-13",
@@ -60,7 +60,7 @@
       "spayed_or_neutered": "spayed"
     },
     {
-      "id": 4,
+      "id": 3,
       "owner_id": 3,
       "name": "Fofo",
       "birth_date": "2018-01-02",
@@ -70,6 +70,30 @@
       "vaccination_status": "current",
       "gender": "male",
       "spayed_or_neutered": "neutered"
+    },
+    {
+      "owner_id": 0,
+      "name": "Frisbee",
+      "birth_date": "2010-10-10",
+      "species": "dog",
+      "breed": "pug",
+      "color": "beige",
+      "vaccination_status": "current",
+      "gender": "male",
+      "spayed_or_neutered": "no",
+      "id": 4
+    },
+    {
+      "owner_id": 0,
+      "name": "Toby",
+      "birth_date": "",
+      "species": "dog",
+      "breed": "husky",
+      "color": "",
+      "vaccination_status": "past due",
+      "gender": "male",
+      "spayed_or_neutered": "no",
+      "id": 5
     }
   ]
 }
