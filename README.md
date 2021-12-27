@@ -43,6 +43,8 @@ Tested in `Mozilla Firefox v94.0` for Ubuntu (development and production builds)
 
 [React Router](https://reactrouter.com/)
 
+[Prop Types](https://www.npmjs.com/package/prop-types)
+
 ### Create React App
 
 Project bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
