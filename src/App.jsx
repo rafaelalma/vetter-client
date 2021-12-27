@@ -24,11 +24,14 @@ export default function App() {
             <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/dashboard" element={<DashboardPage />}>
               <Route index element={null} />
-              <Route path="patients" element={<PatientsList />} />
+              <Route path="patients" element={<PatientsList />}>
+                <Route path=":id" element={null} />
+              </Route>
               <Route path="owners" element={null} />
             </Route>
             <Route path="/medicines" element={<MedicinesPage />}>
               <Route index element={null} />
+              <Route path="saved" element={null} />
               <Route path="categories" element={null} />
               <Route path="search" element={<SearchForm />} />
             </Route>
