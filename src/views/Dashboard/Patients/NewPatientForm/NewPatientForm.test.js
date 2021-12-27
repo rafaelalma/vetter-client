@@ -8,6 +8,7 @@ describe("NewPatientForm", () => {
     const inputElement = screen.getByLabelText("Name*");
     expect(inputElement).toBeInTheDocument();
     expect(inputElement.type).toBe("text");
+    expect(inputElement.required).toBe(true);
   });
 
   it("should update name value with user input", () => {
@@ -29,6 +30,36 @@ describe("NewPatientForm", () => {
     const inputElement = screen.getByLabelText("Birth Date");
     fireEvent.change(inputElement, { target: { value: "1992-10-30" } });
     expect(inputElement.value).toBe("1992-10-30");
+  });
+
+  it("should render required Species text type input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Species*");
+    expect(inputElement).toBeInTheDocument();
+    expect(inputElement.type).toBe("text");
+    expect(inputElement.required).toBe(true);
+  });
+
+  it("should update species value with user input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Species*");
+    fireEvent.change(inputElement, { target: { value: "dog" } });
+    expect(inputElement.value).toBe("dog");
+  });
+
+  it("should render required Breed text type input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Breed*");
+    expect(inputElement).toBeInTheDocument();
+    expect(inputElement.type).toBe("text");
+    expect(inputElement.required).toBe(true);
+  });
+
+  it("should update breed value with user input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Breed*");
+    fireEvent.change(inputElement, { target: { value: "pinscher" } });
+    expect(inputElement.value).toBe("pinscher");
   });
 
   it("should render Add submit type button", () => {
