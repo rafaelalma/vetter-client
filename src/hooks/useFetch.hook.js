@@ -23,9 +23,25 @@ export default function useFetch(baseUrl) {
   }
 
   function post(url, body) {
+    return send("post", url, body);
+  }
+
+  function put(url, body) {
+    return send("put", url, body);
+  }
+
+  function patch(url, body) {
+    return send("patch", url, body);
+  }
+
+  function del(url, body) {
+    return send("delete", url, body);
+  }
+
+  function send(method, url, body) {
     return new Promise((resolve, reject) => {
       fetch(baseUrl + url, {
-        method: "post",
+        method,
         headers: {
           "Content-Type": "application/json",
         },
@@ -47,5 +63,5 @@ export default function useFetch(baseUrl) {
     });
   }
 
-  return { get, post, loading };
+  return { get, post, put, patch, del, loading };
 }

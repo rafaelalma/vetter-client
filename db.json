@@ -94,6 +94,18 @@
       "gender": "male",
       "spayed_or_neutered": "no",
       "id": 5
+    },
+    {
+      "owner_id": 0,
+      "name": "Gloves",
+      "birth_date": "2020-12-02",
+      "species": "cat",
+      "breed": "unsure",
+      "color": "orange",
+      "vaccination_status": "current",
+      "gender": "female",
+      "spayed_or_neutered": "no",
+      "id": 6
     }
   ]
 }
