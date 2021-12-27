@@ -8,6 +8,13 @@ export default function DashboardPage() {
         <ul className="dashboard-page-navigation">
           <li>
             <h2>
+              <NavLink className="link-accent" end to="/dashboard">
+                Summary
+              </NavLink>
+            </h2>
+          </li>
+          <li>
+            <h2>
               <NavLink className="link-accent" to="/dashboard/patients">
                 Patients
               </NavLink>
