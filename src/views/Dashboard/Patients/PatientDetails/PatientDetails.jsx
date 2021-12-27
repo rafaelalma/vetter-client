@@ -1,15 +1,18 @@
+import { Button } from "components/buttons";
 import { Loader } from "components/loaders";
 import useFetch from "hooks/useFetch.hook";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./PatientDetails.scss";
 
 export default function PatientDetails() {
   const params = useParams();
 
-  const { get, loading } = useFetch("http://localhost:3001/");
+  const { get, del, loading } = useFetch("http://localhost:3001/");
 
   const [details, setDetails] = useState({});
+
+  const navigate = useNavigate();
 
   const id = Number.parseInt(params.id, 10);
 
@@ -37,6 +40,19 @@ export default function PatientDetails() {
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleDeleteClick = () => {
+    (async () => {
+      try {
+        await del(`patients/${id}`);
+        console.log(`Delete patient ${id}`);
+
+        navigate("/dashboard/patients");
+      } catch (error) {
+        console.error(error);
+      }
+    })();
+  };
 
   return loading ? (
     <Loader />
@@ -69,6 +85,13 @@ export default function PatientDetails() {
       <p>
         <strong>Spayed or Neutered:</strong> {spayed_or_neutered}
       </p>
+      <Button
+        onClick={handleDeleteClick}
+        disabled={loading}
+        className="patient-details-delete-btn"
+      >
+        Delete
+      </Button>
     </div>
   );
 }
