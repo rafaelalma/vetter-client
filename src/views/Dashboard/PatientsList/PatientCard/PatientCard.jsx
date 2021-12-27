@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import "./PatientCard.scss";
 
 export default function PatientCard({ patient }) {
@@ -11,3 +12,11 @@ export default function PatientCard({ patient }) {
     </li>
   );
 }
+
+PatientCard.propTypes = {
+  patient: propTypes.shape({
+    name: propTypes.string.isRequired,
+    species: propTypes.string.isRequired,
+    breed: propTypes.string.isRequired,
+  }),
+};
