@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 export default function useFetch(baseUrl) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   function get(url) {
     return new Promise((resolve, reject) => {
+      setLoading(true);
       fetch(baseUrl + url)
         .then((response) => response.json())
         .then((data) => {
@@ -40,6 +41,7 @@ export default function useFetch(baseUrl) {
 
   function send(method, url, body) {
     return new Promise((resolve, reject) => {
+      setLoading(true);
       fetch(baseUrl + url, {
         method,
         headers: {
