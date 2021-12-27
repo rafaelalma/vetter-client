@@ -6,7 +6,7 @@ import "./PatientsList.scss";
 
 export default function PatientsList() {
   const [patients, setPatients] = useState([]);
-  const { get, loading } = useFetch("http://localhost:3001/");
+  const { get, del, loading } = useFetch("http://localhost:3001/");
 
   useEffect(() => {
     (async () => {
@@ -22,12 +22,30 @@ export default function PatientsList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleDeleteClick = (id) => {
+    (async () => {
+      try {
+        await del(`patients/${id}`);
+        console.log(`Delete patient ${id}`);
+
+        setPatients(patients.filter((patient) => patient.id !== id));
+      } catch (error) {
+        console.error(error);
+      }
+    })();
+  };
+
   return loading ? (
     <Loader />
   ) : (
     <ul className="PatientsList">
       {patients.map((patient) => (
-        <PatientCard key={patient.id} patient={patient} />
+        <PatientCard
+          key={patient.id}
+          patient={patient}
+          onDeleteClick={handleDeleteClick}
+          loading={loading}
+        />
       ))}
     </ul>
   );

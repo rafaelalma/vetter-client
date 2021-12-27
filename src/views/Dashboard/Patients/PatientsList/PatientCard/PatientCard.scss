@@ -7,11 +7,17 @@
   background-color: $white;
   border-radius: 3px;
   text-align: center;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .patient-card-img {
   border: 1px solid $primary-1;
   border-radius: 50%;
+}
+
+.patient-card-delete-btn {
+  align-self: flex-end;
 }

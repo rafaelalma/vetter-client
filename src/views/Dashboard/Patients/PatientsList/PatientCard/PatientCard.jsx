@@ -1,8 +1,9 @@
+import { Button } from "components/buttons";
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./PatientCard.scss";
 
-export default function PatientCard({ patient }) {
+export default function PatientCard({ patient, onDeleteClick, loading }) {
   const { id, name, species, breed } = patient;
 
   return (
@@ -21,6 +22,14 @@ export default function PatientCard({ patient }) {
         <p>{species}</p>
         <p>{breed}</p>
       </div>
+      <Button
+        outline
+        onClick={() => onDeleteClick(id)}
+        disabled={loading}
+        className="patient-card-delete-btn"
+      >
+        Delete
+      </Button>
     </li>
   );
 }
@@ -32,4 +41,6 @@ PatientCard.propTypes = {
     species: propTypes.string.isRequired,
     breed: propTypes.string.isRequired,
   }),
+  onDeleteClick: propTypes.func.isRequired,
+  loading: propTypes.bool.isRequired,
 };
