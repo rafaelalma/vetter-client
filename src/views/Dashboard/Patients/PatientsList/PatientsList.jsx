@@ -22,14 +22,13 @@ export default function PatientsList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return (
-    <>
-      {loading && <Loader />}
-      <ul className="PatientsList">
-        {patients.map((patient) => (
-          <PatientCard key={patient.id} patient={patient} />
-        ))}
-      </ul>
-    </>
+  return loading ? (
+    <Loader />
+  ) : (
+    <ul className="PatientsList">
+      {patients.map((patient) => (
+        <PatientCard key={patient.id} patient={patient} />
+      ))}
+    </ul>
   );
 }
