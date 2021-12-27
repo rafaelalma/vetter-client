@@ -25,7 +25,7 @@ export default function App() {
             <Route path="/dashboard" element={<DashboardPage />}>
               <Route index element={null} />
               <Route path="patients" element={<PatientsList />} />
-              <Route path="saved-medicines" element={null} />
+              <Route path="owners" element={null} />
             </Route>
             <Route path="/medicines" element={<MedicinesPage />}>
               <Route index element={null} />
