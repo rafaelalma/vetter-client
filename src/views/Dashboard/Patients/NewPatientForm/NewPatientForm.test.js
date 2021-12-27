@@ -62,6 +62,65 @@ describe("NewPatientForm", () => {
     expect(inputElement.value).toBe("pinscher");
   });
 
+  it("should render Color text type input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Color");
+    expect(inputElement).toBeInTheDocument();
+    expect(inputElement.type).toBe("text");
+  });
+
+  it("should update color value with user input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Color");
+    fireEvent.change(inputElement, { target: { value: "black" } });
+    expect(inputElement.value).toBe("black");
+  });
+
+  it("should render required Vaccination Status text type input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Vaccination Status*");
+    expect(inputElement).toBeInTheDocument();
+    expect(inputElement.type).toBe("text");
+    expect(inputElement.required).toBe(true);
+  });
+
+  it("should update vaccination status value with user input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Vaccination Status*");
+    fireEvent.change(inputElement, { target: { value: "current" } });
+    expect(inputElement.value).toBe("current");
+  });
+
+  it("should render required Gender text type input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Gender*");
+    expect(inputElement).toBeInTheDocument();
+    expect(inputElement.type).toBe("text");
+    expect(inputElement.required).toBe(true);
+  });
+
+  it("should update gender value with user input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Gender*");
+    fireEvent.change(inputElement, { target: { value: "male" } });
+    expect(inputElement.value).toBe("male");
+  });
+
+  it("should render required Spayed or Neutered text type input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Spayed or Neutered*");
+    expect(inputElement).toBeInTheDocument();
+    expect(inputElement.type).toBe("text");
+    expect(inputElement.required).toBe(true);
+  });
+
+  it("should update spayed or neutered value with user input", () => {
+    render(<NewPatientForm />, { wrapper: BrowserRouter });
+    const inputElement = screen.getByLabelText("Spayed or Neutered*");
+    fireEvent.change(inputElement, { target: { value: "spayed" } });
+    expect(inputElement.value).toBe("spayed");
+  });
+
   it("should render Add submit type button", () => {
     render(<NewPatientForm />, { wrapper: BrowserRouter });
     const buttonElement = screen.getByRole("button", { name: "Add" });
