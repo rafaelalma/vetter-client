@@ -43,19 +43,23 @@ export default function PatientDetails() {
   ) : (
     <div className="PatientDetails">
       <h3>{name}</h3>
-      <p>
-        <strong>Birth date:</strong>{" "}
-        <time dateTime={birth_date}>{birth_date}</time>
-      </p>
+      {birth_date && (
+        <p>
+          <strong>Birth date:</strong>{" "}
+          <time dateTime={birth_date}>{birth_date}</time>
+        </p>
+      )}
       <p>
         <strong>Species:</strong> {species}
       </p>
       <p>
         <strong>Breed:</strong> {breed}
       </p>
-      <p>
-        <strong>Color:</strong> {color}
-      </p>
+      {color && (
+        <p>
+          <strong>Color:</strong> {color}
+        </p>
+      )}
       <p>
         <strong>Vaccination Status:</strong> {vaccination_status}
       </p>
