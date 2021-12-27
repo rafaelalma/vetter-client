@@ -2,9 +2,16 @@
 @import "styles/settings/colors";
 
 .PatientCard {
-  padding: $spacing-1;
+  padding: $spacing-2;
   border: 2px solid $primary-1;
   background-color: $white;
   border-radius: 3px;
   text-align: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.patient-card-img {
+  border: 1px solid $primary-1;
+  border-radius: 50%;
 }
