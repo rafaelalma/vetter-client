@@ -1,0 +1,23 @@
+@import "styles/settings/spacing";
+@import "styles/settings/colors";
+
+.OwnerCard {
+  padding: $spacing-2;
+  border: 2px solid $primary-1;
+  background-color: $white;
+  border-radius: 3px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.owner-card-img {
+  border: 1px solid $primary-1;
+  border-radius: 50%;
+}
+
+.owner-card-delete-btn {
+  align-self: flex-end;
+}
