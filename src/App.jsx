@@ -4,6 +4,8 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import { AuthenticationProvider } from "./context/authentication/AuthenticationContext";
 import DashboardPage from "./views/Dashboard/DashboardPage";
+import OwnersList from "./views/Dashboard/Owners/OwnersList/OwnersList";
+import OwnersPage from "./views/Dashboard/Owners/OwnersPage";
 import NewPatientForm from "./views/Dashboard/Patients/NewPatientForm/NewPatientForm";
 import PatientDetails from "./views/Dashboard/Patients/PatientDetails/PatientDetails";
 import PatientsList from "./views/Dashboard/Patients/PatientsList/PatientsList";
@@ -32,7 +34,11 @@ export default function App() {
                 <Route path="new" element={<NewPatientForm />} />
                 <Route path=":id" element={<PatientDetails />} />
               </Route>
-              <Route path="owners" element={null} />
+              <Route path="owners" element={<OwnersPage />}>
+                <Route index element={<OwnersList />} />
+                <Route path="new" element={null} />
+                <Route path="id" element={null} />
+              </Route>
             </Route>
             <Route path="/medicines" element={<MedicinesPage />}>
               <Route index element={null} />
