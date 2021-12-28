@@ -1,18 +1,20 @@
 import { Button } from "components/buttons";
 import { Loader } from "components/loaders";
 import useFetch from "hooks/useFetch.hook";
-import { useEffect, useState } from "react";
+import useFirstTimeGetSet from "hooks/useFirstTimeGetSet.hook";
+import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./PatientDetails.scss";
 
 export default function PatientDetails() {
+  const [details, setDetails] = useState({});
+  const [loading, setLoading] = useState(false);
+
   const params = useParams();
 
-  const { get, del, loading } = useFetch("http://localhost:3001/");
-
-  const [details, setDetails] = useState({});
-
   const navigate = useNavigate();
+
+  const { get, del } = useFetch("http://localhost:3001/");
 
   const id = Number.parseInt(params.id, 10);
 
@@ -27,28 +29,28 @@ export default function PatientDetails() {
     spayed_or_neutered,
   } = details;
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const data = await get(`patients/${id}`);
-        console.log(`Patient ${id} details`, data);
-
-        setDetails(data);
-      } catch (error) {
-        console.error(error);
-      }
-    })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  useFirstTimeGetSet(
+    get,
+    `patients/${id}`,
+    setDetails,
+    setLoading,
+    `Patient ${id} details`
+  );
 
   const handleDeleteClick = () => {
     (async () => {
       try {
+        setLoading(true);
+
         await del(`patients/${id}`);
         console.log(`Delete patient ${id}`);
 
+        setLoading(false);
+
         navigate("/dashboard/patients");
       } catch (error) {
+        setLoading(false);
+
         console.error(error);
       }
     })();

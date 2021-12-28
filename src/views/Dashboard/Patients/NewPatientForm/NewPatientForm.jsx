@@ -15,7 +15,9 @@ export default function NewPatientForm() {
   const [gender, setGender] = useState("");
   const [spayedOrNeutered, setSpayedOrNeutered] = useState("");
 
-  const { post, loading } = useFetch("http://localhost:3001/");
+  const [loading, setLoading] = useState(false);
+
+  const { post } = useFetch("http://localhost:3001/");
 
   const navigate = useNavigate();
 
@@ -36,11 +38,17 @@ export default function NewPatientForm() {
 
     (async () => {
       try {
+        setLoading(true);
+
         const data = await post("patients", newPatient);
         console.log("Post patient", data);
 
+        setLoading(false);
+
         navigate("/dashboard/patients");
       } catch (error) {
+        setLoading(false);
+
         console.error(error);
       }
     })();

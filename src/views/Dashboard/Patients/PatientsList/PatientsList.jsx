@@ -1,36 +1,31 @@
 import { Loader } from "components/loaders";
 import useFetch from "hooks/useFetch.hook";
-import { useEffect, useState } from "react";
+import useFirstTimeGetSet from "hooks/useFirstTimeGetSet.hook";
+import { useState } from "react";
 import PatientCard from "./PatientCard/PatientCard";
 import "./PatientsList.scss";
 
 export default function PatientsList() {
   const [patients, setPatients] = useState([]);
-  const { get, del, loading } = useFetch("http://localhost:3001/");
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const data = await get("patients");
-        console.log("Patients", data);
+  const { get, del } = useFetch("http://localhost:3001/");
 
-        setPatients(data);
-      } catch (error) {
-        console.error(error);
-      }
-    })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  useFirstTimeGetSet(get, "patients", setPatients, setLoading, "Patients");
 
   const handleDeleteClick = (id) => {
     (async () => {
       try {
+        setLoading(true);
+
         await del(`patients/${id}`);
         console.log(`Delete patient ${id}`);
 
         setPatients(patients.filter((patient) => patient.id !== id));
       } catch (error) {
         console.error(error);
+      } finally {
+        setLoading(false);
       }
     })();
   };
