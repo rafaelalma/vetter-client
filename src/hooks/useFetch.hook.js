@@ -1,23 +1,15 @@
-import { useState } from "react";
-
 export default function useFetch(baseUrl) {
-  const [loading, setLoading] = useState(false);
-
-  function get(url) {
+  function get(url, signal) {
     return new Promise((resolve, reject) => {
-      setLoading(true);
-      fetch(baseUrl + url)
+      fetch(baseUrl + url, { signal })
         .then((response) => response.json())
         .then((data) => {
           if (!data) {
-            setLoading(false);
             return reject(data);
           }
-          setLoading(false);
           resolve(data);
         })
         .catch((error) => {
-          setLoading(false);
           reject(error);
         });
     });
@@ -41,7 +33,6 @@ export default function useFetch(baseUrl) {
 
   function send(method, url, body) {
     return new Promise((resolve, reject) => {
-      setLoading(true);
       fetch(baseUrl + url, {
         method,
         headers: {
@@ -52,18 +43,15 @@ export default function useFetch(baseUrl) {
         .then((response) => response.json())
         .then((data) => {
           if (!data) {
-            setLoading(false);
             return reject(data);
           }
-          setLoading(false);
           resolve(data);
         })
         .catch((error) => {
-          setLoading(false);
           reject(error);
         });
     });
   }
 
-  return { get, post, put, patch, del, loading };
+  return { get, post, put, patch, del };
 }
