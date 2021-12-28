@@ -25,7 +25,7 @@ export default function NewPatientForm() {
     event.preventDefault();
 
     const newPatient = {
-      owner_id: 0, // TODO: get from user
+      owner_id: 0,
       name,
       birth_date: birthDate,
       species,
