@@ -3,6 +3,13 @@ import { BrowserRouter } from "react-router-dom";
 import LoginForm from "./LoginForm";
 
 describe("LoginForm", () => {
+  it("should have LoginForm class", () => {
+    render(<LoginForm />, { wrapper: BrowserRouter });
+    const formElement = screen.getByRole("form", { name: "Login" });
+    expect(formElement).toBeInTheDocument();
+    expect(formElement.classList.contains("LoginForm")).toBe(true);
+  });
+
   it("should render required Email type input", () => {
     render(<LoginForm />, { wrapper: BrowserRouter });
     const inputElement = screen.getByLabelText("Email*");

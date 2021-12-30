@@ -7,7 +7,6 @@ describe("LoginPage", () => {
     render(<LoginPage />, { wrapper: BrowserRouter });
     const formElement = screen.getByRole("form", { name: "Login" });
     expect(formElement).toBeInTheDocument();
-    expect(formElement.classList.contains("LoginForm")).toBe(true);
   });
 
   it("should render Forgot Password link", () => {
