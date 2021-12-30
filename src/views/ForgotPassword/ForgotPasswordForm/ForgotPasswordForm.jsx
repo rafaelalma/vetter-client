@@ -12,6 +12,8 @@ export default function ForgotPasswordForm() {
   const handleForgotPasswordSubmit = (event) => {
     event.preventDefault();
 
+    // TODO: send email with password
+
     navigate("/login");
   };
 

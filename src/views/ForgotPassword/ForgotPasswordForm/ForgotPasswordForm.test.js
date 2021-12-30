@@ -3,11 +3,12 @@ import { BrowserRouter } from "react-router-dom";
 import ForgotPasswordForm from "./ForgotPasswordForm";
 
 describe("ForgotPasswordForm", () => {
-  it("should render Email type input", () => {
+  it("should render required Email type input", () => {
     render(<ForgotPasswordForm />, { wrapper: BrowserRouter });
     const inputElement = screen.getByLabelText("Email*");
     expect(inputElement).toBeInTheDocument();
     expect(inputElement.type).toBe("email");
+    expect(inputElement.required).toBe(true);
   });
 
   it("should update email value with user input", () => {
@@ -25,6 +26,10 @@ describe("ForgotPasswordForm", () => {
   });
 
   xit("should submit Forgot Password form", () => {
+    // TODO
+  });
+
+  xit("should send email with password after been submitted", () => {
     // TODO
   });
 
