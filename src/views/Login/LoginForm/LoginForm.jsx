@@ -84,7 +84,7 @@ export default function LoginForm() {
   };
 
   return (
-    <form className="LoginForm" onSubmit={handleLoginSubmit}>
+    <form aria-label="Login" className="LoginForm" onSubmit={handleLoginSubmit}>
       <Input
         placeholder="Email"
         required
