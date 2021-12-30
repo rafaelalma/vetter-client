@@ -7,6 +7,5 @@ describe("SignUpPage", () => {
     render(<SignUpPage />, { wrapper: BrowserRouter });
     const formElement = screen.getByRole("form", { name: "Sign Up" });
     expect(formElement).toBeInTheDocument();
-    expect(formElement.classList.contains("SignUpForm")).toBe(true);
   });
 });
