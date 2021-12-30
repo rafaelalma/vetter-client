@@ -18,7 +18,11 @@ export default function ForgotPasswordForm() {
   };
 
   return (
-    <form className="ForgotPasswordForm" onSubmit={handleForgotPasswordSubmit}>
+    <form
+      aria-label="Forgot Password"
+      className="ForgotPasswordForm"
+      onSubmit={handleForgotPasswordSubmit}
+    >
       <Input
         placeholder="Email"
         required
