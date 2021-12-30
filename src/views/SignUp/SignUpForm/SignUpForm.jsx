@@ -28,7 +28,6 @@ export default function SignUpForm() {
       last_name: lastName,
       address,
       phone,
-      email,
     };
 
     const newCredentials = {
