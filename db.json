@@ -15,6 +15,13 @@
       "id": 1
     }
   ],
+  "logins": [
+    {
+      "email": "fortiz@gmail.com",
+      "password": "123456",
+      "id": 1
+    }
+  ],
   "owners": [
     {
       "id": 0,
