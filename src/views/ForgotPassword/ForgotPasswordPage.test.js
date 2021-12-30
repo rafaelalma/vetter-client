@@ -7,6 +7,5 @@ describe("ForgotPasswordPage", () => {
     render(<ForgotPasswordPage />, { wrapper: BrowserRouter });
     const formElement = screen.getByRole("form", { name: "Forgot Password" });
     expect(formElement).toBeInTheDocument();
-    expect(formElement.classList.contains("ForgotPasswordForm")).toBe(true);
   });
 });

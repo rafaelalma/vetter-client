@@ -3,6 +3,13 @@ import { BrowserRouter } from "react-router-dom";
 import ForgotPasswordForm from "./ForgotPasswordForm";
 
 describe("ForgotPasswordForm", () => {
+  it("should have ForgotPasswordForm class", () => {
+    render(<ForgotPasswordForm />, { wrapper: BrowserRouter });
+    const formElement = screen.getByRole("form", { name: "Forgot Password" });
+    expect(formElement).toBeInTheDocument();
+    expect(formElement.classList.contains("ForgotPasswordForm")).toBe(true);
+  });
+
   it("should render required Email type input", () => {
     render(<ForgotPasswordForm />, { wrapper: BrowserRouter });
     const inputElement = screen.getByLabelText("Email*");
