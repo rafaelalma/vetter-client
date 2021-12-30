@@ -26,9 +26,9 @@ export default function App() {
           <Header />
           <Routes>
             <Route path="/" element={null} />
+            <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-            <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/dashboard" element={<DashboardPage />}>
               <Route index element={null} />
               <Route path="patients" element={<PatientsPage />}>
