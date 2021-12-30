@@ -17,8 +17,4 @@ describe("LoginPage", () => {
     });
     expect(linkElement).toBeInTheDocument();
   });
-
-  xit("should navigate to Forgot Password after forgot password link click", () => {
-    // TODO
-  });
 });
