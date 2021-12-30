@@ -58,7 +58,11 @@ export default function SignUpForm() {
   };
 
   return (
-    <form className="SignUpForm" onSubmit={handleSignUpSubmit}>
+    <form
+      aria-label="Sign Up"
+      className="SignUpForm"
+      onSubmit={handleSignUpSubmit}
+    >
       <Input
         placeholder="First Name"
         required
