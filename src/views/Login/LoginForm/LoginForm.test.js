@@ -3,11 +3,12 @@ import { BrowserRouter } from "react-router-dom";
 import LoginForm from "./LoginForm";
 
 describe("LoginForm", () => {
-  it("should render Email type input", () => {
+  it("should render required Email type input", () => {
     render(<LoginForm />, { wrapper: BrowserRouter });
     const inputElement = screen.getByLabelText("Email*");
     expect(inputElement).toBeInTheDocument();
     expect(inputElement.type).toBe("email");
+    expect(inputElement.required).toBe(true);
   });
 
   it("should update email value with user input", () => {
@@ -17,11 +18,12 @@ describe("LoginForm", () => {
     expect(inputElement.value).toBe("test@email.com");
   });
 
-  it("should render Password type input", () => {
+  it("should render required Password type input", () => {
     render(<LoginForm />, { wrapper: BrowserRouter });
     const inputElement = screen.getByLabelText("Password*");
     expect(inputElement).toBeInTheDocument();
     expect(inputElement.type).toBe("password");
+    expect(inputElement.required).toBe(true);
   });
 
   it("should update password value with user input", () => {
