@@ -1,4 +1,4 @@
-describe("PatientDetails", () => {
+describe("PatientDetailsPage", () => {
   xit("should", () => {
     // TODO
   });
