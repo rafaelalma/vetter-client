@@ -24,21 +24,24 @@
   ],
   "owners": [
     {
-      "id": 0,
+      "id": 1,
+      "vet_id": 1,
       "first_name": "Alicia",
       "last_name": "Lamarca",
       "email": "alicialamarca@gmail.com",
       "phone": "679664632"
     },
     {
-      "id": 1,
+      "id": 2,
+      "vet_id": 1,
       "first_name": "Rafael",
       "last_name": "Álvarez",
       "email": "rafaelalma92@gmail.com",
       "phone": "629664628"
     },
     {
-      "id": 2,
+      "id": 3,
+      "vet_id": 1,
       "first_name": "Antonio",
       "last_name": "López",
       "email": "antolo@gmail.com",
@@ -47,7 +50,7 @@
   ],
   "patients": [
     {
-      "id": 0,
+      "id": 1,
       "owner_first_name": "Alicia",
       "owner_last_name": "Lamarca",
       "owner_email": "alicialamarca@gmail.com",
@@ -62,7 +65,7 @@
       "spayed_or_neutered": "no"
     },
     {
-      "id": 1,
+      "id": 2,
       "owner_first_name": "Rafael",
       "owner_last_name": "Álvarez",
       "owner_email": "rafaelalma92@gmail.com",
@@ -77,7 +80,7 @@
       "spayed_or_neutered": "no"
     },
     {
-      "id": 2,
+      "id": 3,
       "owner_first_name": "Antonio",
       "owner_last_name": "López",
       "owner_email": "antolo@gmail.com",
@@ -92,7 +95,7 @@
       "spayed_or_neutered": "spayed"
     },
     {
-      "id": 3,
+      "id": 4,
       "owner_first_name": "Antonio",
       "owner_last_name": "López",
       "owner_email": "antolo@gmail.com",
@@ -109,8 +112,8 @@
   ],
   "pets": [
     {
-      "id": 0,
-      "owner_id": 0,
+      "id": 1,
+      "owner_id": 1,
       "name": "Leo",
       "birth_date": "2015-08-10",
       "species": "dog",
@@ -121,8 +124,8 @@
       "spayed_or_neutered": "no"
     },
     {
-      "id": 1,
-      "owner_id": 1,
+      "id": 2,
+      "owner_id": 2,
       "name": "Alpha",
       "birth_date": "2019-09-10",
       "species": "dog",
@@ -133,8 +136,8 @@
       "spayed_or_neutered": "no"
     },
     {
-      "id": 2,
-      "owner_id": 2,
+      "id": 3,
+      "owner_id": 3,
       "name": "Fify",
       "birth_date": "2020-12-13",
       "species": "cat",
@@ -145,8 +148,8 @@
       "spayed_or_neutered": "spayed"
     },
     {
-      "id": 3,
-      "owner_id": 2,
+      "id": 4,
+      "owner_id": 3,
       "name": "Fofo",
       "birth_date": "2018-01-02",
       "species": "cat",
