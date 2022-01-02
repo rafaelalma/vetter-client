@@ -1,10 +1,9 @@
-import { Button } from "components/buttons";
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./PatientCard.scss";
 
-export default function PatientCard({ patient, onDeleteClick, loading }) {
-  const { id, name, species, breed } = patient;
+export default function PatientCard({ patient }) {
+  const { id, name } = patient;
 
   return (
     <li className="PatientCard">
@@ -17,19 +16,7 @@ export default function PatientCard({ patient, onDeleteClick, loading }) {
           className="patient-card-img"
         />
       </Link>
-      <div>
-        <h3>{name}</h3>
-        <p>{species}</p>
-        <p>{breed}</p>
-      </div>
-      <Button
-        outline
-        onClick={() => onDeleteClick(id)}
-        disabled={loading}
-        className="patient-card-delete-btn"
-      >
-        Delete
-      </Button>
+      <h3>{name}</h3>
     </li>
   );
 }
@@ -38,9 +25,5 @@ PatientCard.propTypes = {
   patient: propTypes.shape({
     id: propTypes.number.isRequired,
     name: propTypes.string.isRequired,
-    species: propTypes.string.isRequired,
-    breed: propTypes.string.isRequired,
   }),
-  onDeleteClick: propTypes.func.isRequired,
-  loading: propTypes.bool.isRequired,
 };
