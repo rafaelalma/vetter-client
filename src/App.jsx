@@ -12,6 +12,7 @@ import PatientDetails from "views/Dashboard/Patients/PatientDetails/PatientDetai
 import PatientsList from "views/Dashboard/Patients/PatientsList/PatientsList";
 import PatientsPage from "views/Dashboard/Patients/PatientsPage";
 import ForgotPasswordPage from "views/ForgotPassword/ForgotPasswordPage";
+import HomePage from "views/Home/HomePage";
 import LoginPage from "views/Login/LoginPage";
 import MedicinesPage from "views/Medicines/MedicinesPage";
 import SearchForm from "views/Medicines/SearchForm/SearchForm";
@@ -25,7 +26,7 @@ export default function App() {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={null} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
