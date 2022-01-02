@@ -5,7 +5,7 @@ export default function useFirstTimeGetSet(
   url,
   setState,
   setLoading,
-  message = "get"
+  message = "Get"
 ) {
   useEffect(() => {
     const abortController = new AbortController();
