@@ -62,6 +62,7 @@ export default function OwnerDetails() {
         <strong>Phone: </strong>
         {phone}
       </p>
+
       <Button
         onClick={handleDeleteClick}
         disabled={loading}
