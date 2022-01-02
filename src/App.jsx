@@ -16,6 +16,7 @@ import HomePage from "views/Home/HomePage";
 import LoginPage from "views/Login/LoginPage";
 import MedicinesPage from "views/Medicines/MedicinesPage";
 import SearchForm from "views/Medicines/SearchForm/SearchForm";
+import NotFoundPage from "views/NotFound/NotFoundPage";
 import SignUpPage from "views/SignUp/SignUpPage";
 import "./App.scss";
 
@@ -49,7 +50,7 @@ export default function App() {
               <Route path="categories" element={null} />
               <Route path="search" element={<SearchForm />} />
             </Route>
-            <Route path="*" element={null} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </AuthenticationProvider>
