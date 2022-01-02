@@ -11,6 +11,7 @@ import NewPatientForm from "views/Dashboard/Patients/NewPatientForm/NewPatientFo
 import PatientDetails from "views/Dashboard/Patients/PatientDetails/PatientDetails";
 import PatientsList from "views/Dashboard/Patients/PatientsList/PatientsList";
 import PatientsPage from "views/Dashboard/Patients/PatientsPage";
+import SummaryPage from "views/Dashboard/Summary/SummaryPage";
 import ForgotPasswordPage from "views/ForgotPassword/ForgotPasswordPage";
 import HomePage from "views/Home/HomePage";
 import LoginPage from "views/Login/LoginPage";
@@ -32,7 +33,7 @@ export default function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/dashboard" element={<DashboardPage />}>
-              <Route index element={null} />
+              <Route index element={<SummaryPage />} />
               <Route path="patients" element={<PatientsPage />}>
                 <Route index element={<PatientsList />} />
                 <Route path="new" element={<NewPatientForm />} />
