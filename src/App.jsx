@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DashboardPage from "views/Dashboard/DashboardPage";
 import NewOwnerForm from "views/Dashboard/Owners/NewOwnerForm/NewOwnerForm";
-import OwnerDetails from "views/Dashboard/Owners/OwnerDetails/OwnerDetails";
+import OwnerDetailsPage from "views/Dashboard/Owners/OwnerDetails/OwnerDetailsPage";
 import OwnersList from "views/Dashboard/Owners/OwnersList/OwnersList";
 import OwnersPage from "views/Dashboard/Owners/OwnersPage";
 import NewPatientForm from "views/Dashboard/Patients/NewPatientForm/NewPatientForm";
@@ -42,7 +42,7 @@ export default function App() {
               <Route path="owners" element={<OwnersPage />}>
                 <Route index element={<OwnersList />} />
                 <Route path="new" element={<NewOwnerForm />} />
-                <Route path=":id" element={<OwnerDetails />} />
+                <Route path=":id" element={<OwnerDetailsPage />} />
               </Route>
             </Route>
             <Route path="/medicines" element={<MedicinesPage />}>

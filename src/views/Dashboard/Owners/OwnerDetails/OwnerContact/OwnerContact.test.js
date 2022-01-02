@@ -1,4 +1,4 @@
-describe("OwnerDetails", () => {
+describe("OwnerContact", () => {
   xit("should", () => {
     // TODO
   });
