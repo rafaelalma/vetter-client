@@ -18,8 +18,6 @@ export default function OwnerDetails() {
 
   const id = Number.parseInt(params.id, 10);
 
-  const { first_name, last_name, email, phone } = details;
-
   useFirstTimeGetSet(
     get,
     `owners/${id}`,
@@ -27,6 +25,8 @@ export default function OwnerDetails() {
     setLoading,
     `Owner ${id} details`
   );
+
+  const { first_name, last_name, email, phone } = details;
 
   const handleDeleteClick = () => {
     (async () => {

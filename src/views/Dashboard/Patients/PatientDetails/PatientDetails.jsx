@@ -18,6 +18,14 @@ export default function PatientDetails() {
 
   const id = Number.parseInt(params.id, 10);
 
+  useFirstTimeGetSet(
+    get,
+    `patients/${id}`,
+    setDetails,
+    setLoading,
+    `Patient ${id} details`
+  );
+
   const {
     name,
     birth_date,
@@ -32,14 +40,6 @@ export default function PatientDetails() {
   // TODO: refactor
   const { owner_first_name, owner_last_name, owner_email, owner_phone } =
     details;
-
-  useFirstTimeGetSet(
-    get,
-    `patients/${id}`,
-    setDetails,
-    setLoading,
-    `Patient ${id} details`
-  );
 
   const handleDeleteClick = () => {
     (async () => {
