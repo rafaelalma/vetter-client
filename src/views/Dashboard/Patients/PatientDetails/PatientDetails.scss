@@ -2,8 +2,9 @@
 
 .PatientDetails {
   padding: $spacing-2;
-}
-
-.patient-details-delete-btn {
-  margin-top: $spacing-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: $spacing-2;
 }

@@ -29,6 +29,10 @@ export default function PatientDetails() {
     spayed_or_neutered,
   } = details;
 
+  // TODO: refactor
+  const { owner_first_name, owner_last_name, owner_email, owner_phone } =
+    details;
+
   useFirstTimeGetSet(
     get,
     `patients/${id}`,
@@ -60,33 +64,52 @@ export default function PatientDetails() {
     <Loader />
   ) : (
     <div className="PatientDetails">
-      <h3>{name}</h3>
-      {birth_date && (
+      <div>
+        <h3>{name}</h3>
+        {birth_date && (
+          <p>
+            <strong>Birth date:</strong>{" "}
+            <time dateTime={birth_date}>{birth_date}</time>
+          </p>
+        )}
         <p>
-          <strong>Birth date:</strong>{" "}
-          <time dateTime={birth_date}>{birth_date}</time>
+          <strong>Species:</strong> {species}
         </p>
-      )}
-      <p>
-        <strong>Species:</strong> {species}
-      </p>
-      <p>
-        <strong>Breed:</strong> {breed}
-      </p>
-      {color && (
+        {breed && (
+          <p>
+            <strong>Breed:</strong> {breed}
+          </p>
+        )}
+        {color && (
+          <p>
+            <strong>Color:</strong> {color}
+          </p>
+        )}
         <p>
-          <strong>Color:</strong> {color}
+          <strong>Vaccination Status:</strong> {vaccination_status}
         </p>
-      )}
-      <p>
-        <strong>Vaccination Status:</strong> {vaccination_status}
-      </p>
-      <p>
-        <strong>Gender:</strong> {gender}
-      </p>
-      <p>
-        <strong>Spayed or Neutered:</strong> {spayed_or_neutered}
-      </p>
+        <p>
+          <strong>Gender:</strong> {gender}
+        </p>
+        <p>
+          <strong>Spayed or Neutered:</strong> {spayed_or_neutered}
+        </p>
+      </div>
+
+      <div>
+        <h3>
+          {owner_first_name} {owner_last_name}
+        </h3>
+        <p>
+          <strong>Email: </strong>
+          {owner_email}
+        </p>
+        <p>
+          <strong>Phone: </strong>
+          {owner_phone}
+        </p>
+      </div>
+
       <Button
         onClick={handleDeleteClick}
         disabled={loading}
