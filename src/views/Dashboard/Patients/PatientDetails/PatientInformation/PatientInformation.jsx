@@ -1,10 +1,10 @@
 import { Loader } from "components/loaders";
 import useFetch from "hooks/useFetch.hook";
 import useFirstTimeGetSet from "hooks/useFirstTimeGetSet.hook";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./PatientInformation.scss";
 
-export default function PatientInformation({ id }) {
+export default function PatientInformation({ id, setOwnerId }) {
   const [information, setInformation] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -19,6 +19,7 @@ export default function PatientInformation({ id }) {
   );
 
   const {
+    owner_id,
     name,
     birth_date,
     species,
@@ -28,6 +29,12 @@ export default function PatientInformation({ id }) {
     gender,
     spayed_or_neutered,
   } = information;
+
+  useEffect(() => {
+    if (owner_id) {
+      setOwnerId(owner_id);
+    }
+  }, [owner_id, setOwnerId]);
 
   return loading ? (
     <Loader />

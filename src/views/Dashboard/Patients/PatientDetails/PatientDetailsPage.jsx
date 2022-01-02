@@ -1,5 +1,4 @@
 import { Button } from "components/buttons";
-import { Loader } from "components/loaders";
 import useFetch from "hooks/useFetch.hook";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -8,6 +7,7 @@ import "./PatientDetailsPage.scss";
 import PatientInformation from "./PatientInformation/PatientInformation";
 
 export default function PatientDetailsPage() {
+  const [ownerId, setOwnerId] = useState();
   const [loading, setLoading] = useState(false);
 
   const params = useParams();
@@ -37,12 +37,10 @@ export default function PatientDetailsPage() {
     })();
   };
 
-  return loading ? (
-    <Loader />
-  ) : (
+  return (
     <div className="PatientDetailsPage">
-      <PatientInformation id={id} />
-      <OwnerInformation id={id} />
+      <PatientInformation id={id} setOwnerId={setOwnerId} />
+      {ownerId && <OwnerInformation id={ownerId} />}
       <Button onClick={handleDeleteClick} disabled={loading}>
         Delete
       </Button>
