@@ -40,7 +40,7 @@ export default function NewPatientForm() {
       try {
         setLoading(true);
 
-        const data = await post("patients", newPatient);
+        const data = await post("pets", newPatient);
         console.log("Post patient", data);
 
         setLoading(false);

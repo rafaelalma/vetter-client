@@ -11,7 +11,7 @@ export default function PatientsList() {
 
   const { get } = useFetch("http://localhost:3001/");
 
-  useFirstTimeGetSet(get, "patients", setPatients, setLoading, "Patients");
+  useFirstTimeGetSet(get, "pets", setPatients, setLoading, "Patients");
 
   return loading ? (
     <Loader />
