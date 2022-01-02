@@ -1,13 +1,15 @@
 import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "./PetCard.scss";
 
 export default function PetCard({ pet }) {
-  const { name } = pet;
+  const { id, name } = pet;
 
   return (
     <li className="PetCard">
-      {/* // TODO: link to patient with pet id */}
-      <img src="" alt="" width="100" height="100" className="pet-card-img" />
+      <Link to={`/dashboard/patients/${id}`}>
+        <img src="" alt="" width="100" height="100" className="pet-card-img" />
+      </Link>
       <h3>{name}</h3>
     </li>
   );

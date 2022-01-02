@@ -3,6 +3,7 @@ import useFetch from "hooks/useFetch.hook";
 import useFirstTimeGetSet from "hooks/useFirstTimeGetSet.hook";
 import propTypes from "prop-types";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./OwnerInformation.scss";
 
 export default function OwnerInformation({ id }) {
@@ -26,7 +27,9 @@ export default function OwnerInformation({ id }) {
   ) : (
     <div className="OwnerInformation">
       <h3>
-        {first_name} {last_name}
+        <Link to={`/dashboard/owners/${id}`} className="link-accent">
+          {first_name} {last_name}
+        </Link>
       </h3>
       <p>
         <strong>Email: </strong>
