@@ -1,25 +1,13 @@
 {
   "vets": [
     {
-      "first_ name": "Francisco",
-      "last_name": "Ortiz",
+      "id": 1,
+      "first_name": "Rafael",
+      "last_name": "Álvarez",
       "address": "c/ Victoria, 7",
-      "phone": "696707057",
-      "id": 1
-    }
-  ],
-  "credentials": [
-    {
-      "email": "fortiz@gmail.com",
-      "password": "123456",
-      "id": 1
-    }
-  ],
-  "logins": [
-    {
-      "email": "fortiz@gmail.com",
-      "password": "123456",
-      "id": 1
+      "phone": "629664628",
+      "email": "rafaelalma92@gmail.com",
+      "password": "123456"
     }
   ],
   "owners": [
@@ -46,68 +34,6 @@
       "last_name": "López",
       "email": "antolo@gmail.com",
       "phone": "629663328"
-    }
-  ],
-  "patients": [
-    {
-      "id": 1,
-      "owner_first_name": "Alicia",
-      "owner_last_name": "Lamarca",
-      "owner_email": "alicialamarca@gmail.com",
-      "owner_phone": "679664632",
-      "name": "Leo",
-      "birth_date": "2015-08-10",
-      "species": "dog",
-      "breed": "pinscher",
-      "color": "black and brown",
-      "vaccination_status": "current",
-      "gender": "male",
-      "spayed_or_neutered": "no"
-    },
-    {
-      "id": 2,
-      "owner_first_name": "Rafael",
-      "owner_last_name": "Álvarez",
-      "owner_email": "rafaelalma92@gmail.com",
-      "owner_phone": "629664628",
-      "name": "Alpha",
-      "birth_date": "2019-09-10",
-      "species": "dog",
-      "breed": "dobermann",
-      "color": "black and brown",
-      "vaccination_status": "current",
-      "gender": "male",
-      "spayed_or_neutered": "no"
-    },
-    {
-      "id": 3,
-      "owner_first_name": "Antonio",
-      "owner_last_name": "López",
-      "owner_email": "antolo@gmail.com",
-      "owner_phone": "629663328",
-      "name": "Fify",
-      "birth_date": "2020-12-13",
-      "species": "cat",
-      "breed": "unsure",
-      "color": "brown",
-      "vaccination_status": "past due",
-      "gender": "female",
-      "spayed_or_neutered": "spayed"
-    },
-    {
-      "id": 4,
-      "owner_first_name": "Antonio",
-      "owner_last_name": "López",
-      "owner_email": "antolo@gmail.com",
-      "owner_phone": "629663328",
-      "name": "Fofo",
-      "birth_date": "2018-01-02",
-      "species": "cat",
-      "breed": "unsure",
-      "color": "white",
-      "vaccination_status": "current",
-      "gender": "male",
-      "spayed_or_neutered": "neutered"
     }
   ],
   "pets": [
