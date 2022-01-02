@@ -28,9 +28,6 @@ export default function SignUpForm() {
       last_name: lastName,
       address,
       phone,
-    };
-
-    const newCredentials = {
       email,
       password,
     };
@@ -39,12 +36,8 @@ export default function SignUpForm() {
       try {
         setLoading(true);
 
-        const [vetData, credentialsData] = await Promise.all([
-          post("vets", newVet),
-          post("credentials", newCredentials),
-        ]);
-        console.log("Post vet", vetData);
-        console.log("Post credentials", credentialsData);
+        const data = await post("vets", newVet);
+        console.log("Post vet", data);
 
         setLoading(false);
 
