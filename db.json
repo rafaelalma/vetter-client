@@ -1,13 +1,13 @@
 {
   "vets": [
     {
-      "id": 1,
       "first_name": "Rafael",
       "last_name": "Álvarez",
       "address": "c/ Victoria, 7",
       "phone": "629664628",
       "email": "rafaelalma92@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "id": 1
     }
   ],
   "owners": [
