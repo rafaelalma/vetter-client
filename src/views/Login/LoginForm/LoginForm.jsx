@@ -53,17 +53,17 @@ export default function LoginForm() {
       try {
         setLoading(true);
 
-        const credentials = await get("credentials");
-        console.log("Credentials", credentials);
+        const vets = await get("vets");
+        console.log("Vets", vets);
 
         setLoading(false);
 
         let goodLogin = false;
 
-        credentials.forEach((credential) => {
+        vets.forEach((vet) => {
           if (
-            credential.email === newLogin.email &&
-            credential.password === newLogin.password
+            vet.email === newLogin.email &&
+            vet.password === newLogin.password
           ) {
             goodLogin = true;
           }
