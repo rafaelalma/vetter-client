@@ -18,11 +18,12 @@ describe("NewPatientForm", () => {
     expect(inputElement.value).toBe("name");
   });
 
-  it("should render Birth Date type input", () => {
+  it("should render not required Birth Date type input", () => {
     render(<NewPatientForm />, { wrapper: BrowserRouter });
     const inputElement = screen.getByLabelText("Birth Date");
     expect(inputElement).toBeInTheDocument();
     expect(inputElement.type).toBe("date");
+    expect(inputElement.required).toBe(false);
   });
 
   it("should update birth date value with user input", () => {
@@ -47,26 +48,27 @@ describe("NewPatientForm", () => {
     expect(inputElement.value).toBe("dog");
   });
 
-  it("should render required Breed text type input", () => {
+  it("should render not required Breed text type input", () => {
     render(<NewPatientForm />, { wrapper: BrowserRouter });
-    const inputElement = screen.getByLabelText("Breed*");
+    const inputElement = screen.getByLabelText("Breed");
     expect(inputElement).toBeInTheDocument();
     expect(inputElement.type).toBe("text");
-    expect(inputElement.required).toBe(true);
+    expect(inputElement.required).toBe(false);
   });
 
   it("should update breed value with user input", () => {
     render(<NewPatientForm />, { wrapper: BrowserRouter });
-    const inputElement = screen.getByLabelText("Breed*");
+    const inputElement = screen.getByLabelText("Breed");
     fireEvent.change(inputElement, { target: { value: "pinscher" } });
     expect(inputElement.value).toBe("pinscher");
   });
 
-  it("should render Color text type input", () => {
+  it("should render not required Color text type input", () => {
     render(<NewPatientForm />, { wrapper: BrowserRouter });
     const inputElement = screen.getByLabelText("Color");
     expect(inputElement).toBeInTheDocument();
     expect(inputElement.type).toBe("text");
+    expect(inputElement.required).toBe(false);
   });
 
   it("should update color value with user input", () => {
@@ -132,7 +134,7 @@ describe("NewPatientForm", () => {
     // TODO
   });
 
-  xit("should navigate to Patients List after submitted", () => {
+  xit("should navigate to Patients List after been submitted", () => {
     // TODO
   });
 });

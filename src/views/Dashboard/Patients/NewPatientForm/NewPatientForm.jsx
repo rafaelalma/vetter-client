@@ -76,7 +76,6 @@ export default function NewPatientForm() {
       />
       <Input
         placeholder="Breed"
-        required
         value={breed}
         onChange={(event) => setBreed(event.target.value)}
       />
