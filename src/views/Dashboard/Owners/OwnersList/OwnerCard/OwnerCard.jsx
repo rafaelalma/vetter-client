@@ -16,11 +16,9 @@ export default function OwnerCard({ owner }) {
           className="owner-card-img"
         />
       </Link>
-      <div>
-        <h3>
-          {first_name} {last_name}
-        </h3>
-      </div>
+      <h3>
+        {first_name} {last_name}
+      </h3>
     </li>
   );
 }
