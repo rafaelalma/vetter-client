@@ -110,10 +110,7 @@
   "pets": [
     {
       "id": 0,
-      "owner_first_name": "Alicia",
-      "owner_last_name": "Lamarca",
-      "owner_email": "alicialamarca@gmail.com",
-      "owner_phone": "679664632",
+      "owner_id": 0,
       "name": "Leo",
       "birth_date": "2015-08-10",
       "species": "dog",
@@ -125,10 +122,7 @@
     },
     {
       "id": 1,
-      "owner_first_name": "Rafael",
-      "owner_last_name": "Álvarez",
-      "owner_email": "rafaelalma92@gmail.com",
-      "owner_phone": "629664628",
+      "owner_id": 1,
       "name": "Alpha",
       "birth_date": "2019-09-10",
       "species": "dog",
@@ -140,10 +134,7 @@
     },
     {
       "id": 2,
-      "owner_first_name": "Antonio",
-      "owner_last_name": "López",
-      "owner_email": "antolo@gmail.com",
-      "owner_phone": "629663328",
+      "owner_id": 2,
       "name": "Fify",
       "birth_date": "2020-12-13",
       "species": "cat",
@@ -155,10 +146,7 @@
     },
     {
       "id": 3,
-      "owner_first_name": "Antonio",
-      "owner_last_name": "López",
-      "owner_email": "antolo@gmail.com",
-      "owner_phone": "629663328",
+      "owner_id": 2,
       "name": "Fofo",
       "birth_date": "2018-01-02",
       "species": "cat",
