@@ -16,19 +16,19 @@ export default function useFetch(baseUrl) {
   }
 
   function post(url, body) {
-    return send("post", url, body);
+    return send("POST", url, body);
   }
 
   function put(url, body) {
-    return send("put", url, body);
+    return send("PUT", url, body);
   }
 
   function patch(url, body) {
-    return send("patch", url, body);
+    return send("PATCH", url, body);
   }
 
   function del(url, body) {
-    return send("delete", url, body);
+    return send("DELETE", url, body);
   }
 
   function send(method, url, body) {
