@@ -41,6 +41,13 @@
       "email": "luma@gmail.com",
       "phone": "654321216",
       "id": 4
+    },
+    {
+      "first_name": "Lucía",
+      "last_name": "Morales",
+      "email": "lumo@gmail.com",
+      "phone": "623661216",
+      "id": 5
     }
   ],
   "pets": [
@@ -91,6 +98,30 @@
       "vaccination_status": "current",
       "gender": "male",
       "spayed_or_neutered": "neutered"
+    },
+    {
+      "owner_id": 5,
+      "name": "Toby",
+      "birth_date": "",
+      "species": "dog",
+      "breed": "beagle",
+      "color": "brown and white",
+      "vaccination_status": "past due",
+      "gender": "male",
+      "spayed_or_neutered": "no",
+      "id": 5
+    },
+    {
+      "owner_id": 0,
+      "name": "Mira",
+      "birth_date": "",
+      "species": "cat",
+      "breed": "",
+      "color": "brown",
+      "vaccination_status": "current",
+      "gender": "female",
+      "spayed_or_neutered": "no",
+      "id": 6
     }
   ]
 }
