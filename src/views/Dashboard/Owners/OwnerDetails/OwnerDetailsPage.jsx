@@ -11,7 +11,7 @@ export default function OwnerDetailsPage() {
 
   const params = useParams();
 
-  const { del } = useFetch("http://localhost:3001/");
+  const { del, get, patch } = useFetch("http://localhost:3001/");
 
   const navigate = useNavigate();
 
@@ -24,6 +24,16 @@ export default function OwnerDetailsPage() {
 
         await del(`owners/${id}`);
         console.log(`Delete owner ${id}`);
+
+        // Reset deleted owner pets owner
+        // TODO: check atomicity
+        const pets = await get(`pets?owner_id=${id}`);
+        console.log("Get deleted owner pets", pets);
+
+        pets.forEach(async (pet) => {
+          const patchedPet = await patch(`pets/${pet.id}`, { owner_id: 0 });
+          console.log(`Patch pet ${pet.id} owner`, patchedPet);
+        });
 
         setLoading(false);
 
