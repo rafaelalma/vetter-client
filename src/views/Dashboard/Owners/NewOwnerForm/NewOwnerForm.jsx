@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NewOwnerForm.scss";
 
-export default function NewOwnerForm() {
+export default function NewOwnerForm({ onNewOwnerSubmit }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,7 +36,11 @@ export default function NewOwnerForm() {
 
         setLoading(false);
 
-        navigate("/dashboard/owners");
+        if (onNewOwnerSubmit) {
+          onNewOwnerSubmit(data.id);
+        } else {
+          navigate("/dashboard/owners");
+        }
       } catch (error) {
         setLoading(false);
 
