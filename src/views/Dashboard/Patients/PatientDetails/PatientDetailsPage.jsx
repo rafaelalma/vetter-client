@@ -2,6 +2,7 @@ import { Button } from "components/buttons";
 import useFetch from "hooks/useFetch.hook";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import ExistingOwnerModal from "./ExistingOwnerModal/ExistingOwnerModal";
 import NewOwnerModal from "./NewOwnerModal/NewOwnerModal";
 import OwnerInformation from "./OwnerInformation/OwnerInformation";
 import "./PatientDetailsPage.scss";
@@ -44,7 +45,10 @@ export default function PatientDetailsPage() {
       {ownerId ? (
         <OwnerInformation id={ownerId} />
       ) : (
-        <NewOwnerModal patientId={id} setOwnerId={setOwnerId} />
+        <>
+          <NewOwnerModal patientId={id} setOwnerId={setOwnerId} />
+          <ExistingOwnerModal patientId={id} setOwnerId={setOwnerId} />
+        </>
       )}
       <Button
         onClick={handleDeleteClick}
