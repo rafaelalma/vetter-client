@@ -5,7 +5,7 @@ import { useState } from "react";
 import OwnerCard from "./OwnerCard/OwnerCard";
 import "./OwnersList.scss";
 
-export default function OwnersList() {
+export default function OwnersList({ btnAdd, onAddOwnerClick }) {
   const [owners, setOwners] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -18,7 +18,12 @@ export default function OwnersList() {
   ) : (
     <ul className="OwnersList">
       {owners.map((owner) => (
-        <OwnerCard key={owner.id} owner={owner} />
+        <OwnerCard
+          key={owner.id}
+          owner={owner}
+          btnAdd={btnAdd}
+          onAddOwnerClick={onAddOwnerClick}
+        />
       ))}
     </ul>
   );

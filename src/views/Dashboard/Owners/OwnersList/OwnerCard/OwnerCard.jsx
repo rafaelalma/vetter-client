@@ -1,8 +1,9 @@
+import { Button } from "components/buttons";
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./OwnerCard.scss";
 
-export default function OwnerCard({ owner }) {
+export default function OwnerCard({ owner, btnAdd, onAddOwnerClick }) {
   const { id, first_name, last_name } = owner;
 
   return (
@@ -16,9 +17,20 @@ export default function OwnerCard({ owner }) {
           className="owner-card-img"
         />
       </Link>
-      <h3>
-        {first_name} {last_name}
-      </h3>
+      <div className="owner-card-content">
+        <h3>
+          {first_name} {last_name}
+        </h3>
+        {btnAdd && (
+          <Button
+            onClick={() => onAddOwnerClick(id)}
+            outline
+            className="btn-small"
+          >
+            Add Owner
+          </Button>
+        )}
+      </div>
     </li>
   );
 }
