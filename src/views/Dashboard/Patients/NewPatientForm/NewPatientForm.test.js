@@ -125,7 +125,9 @@ describe("NewPatientForm", () => {
 
   it("should render Add submit type button", () => {
     render(<NewPatientForm />, { wrapper: BrowserRouter });
-    const buttonElement = screen.getByRole("button", { name: "Add" });
+    const buttonElement = screen.getByRole("button", {
+      name: "Add New Patient",
+    });
     expect(buttonElement).toBeInTheDocument();
     expect(buttonElement.type).toBe("submit");
   });

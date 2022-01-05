@@ -65,7 +65,7 @@ describe("NewOwnerForm", () => {
 
   it("should render Add submit type button", () => {
     render(<NewOwnerForm />, { wrapper: BrowserRouter });
-    const buttonElement = screen.getByRole("button", { name: "Add" });
+    const buttonElement = screen.getByRole("button", { name: "Add New Owner" });
     expect(buttonElement).toBeInTheDocument();
     expect(buttonElement.type).toBe("submit");
   });
