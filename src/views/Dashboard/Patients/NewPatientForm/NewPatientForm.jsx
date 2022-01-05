@@ -105,7 +105,7 @@ export default function NewPatientForm() {
         onChange={(event) => setSpayedOrNeutered(event.target.value)}
       />
       <Button type="submit" disabled={loading}>
-        Add
+        Add New Patient
       </Button>
     </form>
   );

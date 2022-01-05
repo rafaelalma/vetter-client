@@ -78,7 +78,7 @@ export default function NewOwnerForm({ onNewOwnerSubmit }) {
         onChange={(event) => setPhone(event.target.value)}
       />
       <Button type="submit" disabled={loading}>
-        Add
+        Add New Owner
       </Button>
     </form>
   );

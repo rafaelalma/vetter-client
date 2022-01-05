@@ -50,8 +50,12 @@ export default function OwnerDetailsPage() {
     <div className="OwnerDetailsPage">
       <OwnerContact id={id} />
       <PetsList ownerId={id} />
-      <Button onClick={handleDeleteClick} disabled={loading}>
-        Delete
+      <Button
+        onClick={handleDeleteClick}
+        disabled={loading}
+        className="btn-accent"
+      >
+        Delete Owner
       </Button>
     </div>
   );
