@@ -122,6 +122,18 @@
       "gender": "female",
       "spayed_or_neutered": "no",
       "id": 6
+    },
+    {
+      "owner_id": 2,
+      "name": "Beta",
+      "birth_date": "",
+      "species": "dog",
+      "breed": "",
+      "color": "",
+      "vaccination_status": "current",
+      "gender": "male",
+      "spayed_or_neutered": "no",
+      "id": 7
     }
   ]
 }
