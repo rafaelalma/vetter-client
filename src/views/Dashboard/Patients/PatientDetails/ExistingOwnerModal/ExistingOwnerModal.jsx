@@ -8,7 +8,7 @@ export default function ExistingOwnerModal({ patientId, setOwnerId }) {
 
   const { patch } = useFetch("http://localhost:3001/");
 
-  const handleExistingOwnerCLick = () => {
+  const handleExistingOwnerClick = () => {
     setShowList((showList) => !showList);
   };
 
@@ -27,7 +27,7 @@ export default function ExistingOwnerModal({ patientId, setOwnerId }) {
 
   return (
     <>
-      <Button onClick={handleExistingOwnerCLick}>
+      <Button onClick={handleExistingOwnerClick}>
         {showList ? "Cancel" : "Add Existing Owner"}
       </Button>
       {showList && (
