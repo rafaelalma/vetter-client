@@ -8,6 +8,7 @@ import "./OwnerDetailsPage.scss";
 import PetsList from "./PetsList/PetsList";
 
 export default function OwnerDetailsPage() {
+  const [pets, setPets] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const params = useParams();
@@ -50,8 +51,8 @@ export default function OwnerDetailsPage() {
   return (
     <div className="OwnerDetailsPage">
       <OwnerContact id={id} />
-      <PetsList ownerId={id} />
-      <NewPetModal />
+      <PetsList ownerId={id} pets={pets} setPets={setPets} />
+      <NewPetModal ownerId={id} setPets={setPets} />
       <Button
         onClick={handleDeleteClick}
         disabled={loading}

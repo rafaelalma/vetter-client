@@ -6,8 +6,7 @@ import { useState } from "react";
 import PetCard from "./PetCard/PetCard";
 import "./PetsList.scss";
 
-export default function PetsList({ ownerId }) {
-  const [pets, setPets] = useState([]);
+export default function PetsList({ ownerId, pets, setPets }) {
   const [loading, setLoading] = useState(false);
 
   const { get } = useFetch("http://localhost:3001/");
@@ -33,4 +32,6 @@ export default function PetsList({ ownerId }) {
 
 PetsList.propTypes = {
   ownerId: propTypes.number.isRequired,
+  pets: propTypes.array.isRequired,
+  setPets: propTypes.func.isRequired,
 };

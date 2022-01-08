@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NewPatientForm.scss";
 
-export default function NewPatientForm() {
+export default function NewPatientForm({ ownerId, setPets, setShowForm }) {
   const [name, setName] = useState("");
   const [birthDate, setBirthDate] = useState("");
   const [species, setSpecies] = useState("");
@@ -25,7 +25,7 @@ export default function NewPatientForm() {
     event.preventDefault();
 
     const newPatient = {
-      owner_id: 0,
+      owner_id: ownerId ?? 0,
       name,
       birth_date: birthDate,
       species,
@@ -45,7 +45,12 @@ export default function NewPatientForm() {
 
         setLoading(false);
 
-        navigate("/dashboard/patients");
+        if (ownerId) {
+          setPets((pets) => [...pets, data]);
+          setShowForm(false);
+        } else {
+          navigate("/dashboard/patients");
+        }
       } catch (error) {
         setLoading(false);
 
@@ -53,8 +58,6 @@ export default function NewPatientForm() {
       }
     })();
   };
-
-  // TODO: handle owner
 
   return (
     <form className="NewPatientForm" onSubmit={handleNewPatientSubmit}>

@@ -2,7 +2,7 @@ import { Button } from "components/buttons";
 import { useState } from "react";
 import NewPatientForm from "views/Dashboard/Patients/NewPatientForm/NewPatientForm";
 
-export default function NewPetModal() {
+export default function NewPetModal({ ownerId, setPets }) {
   const [showForm, setShowForm] = useState(false);
 
   const handleNewPetClick = () => {
@@ -14,7 +14,13 @@ export default function NewPetModal() {
       <Button onClick={handleNewPetClick}>
         {showForm ? "Cancel" : "Add New Pet"}
       </Button>
-      {showForm && <NewPatientForm />}
+      {showForm && (
+        <NewPatientForm
+          ownerId={ownerId}
+          setPets={setPets}
+          setShowForm={setShowForm}
+        />
+      )}
     </>
   );
 }
