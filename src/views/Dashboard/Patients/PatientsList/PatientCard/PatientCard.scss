@@ -16,3 +16,11 @@
   border: 1px solid $primary-1;
   border-radius: 50%;
 }
+
+.patient-card-content {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
