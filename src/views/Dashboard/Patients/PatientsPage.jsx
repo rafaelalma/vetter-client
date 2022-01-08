@@ -3,7 +3,7 @@ import "./PatientsPage.scss";
 
 export default function PatientsPage() {
   return (
-    <>
+    <div className="PatientsPage">
       <NavLink
         to="/dashboard/patients/new"
         className="link-primary patients-page-new-patient-link"
@@ -11,6 +11,6 @@ export default function PatientsPage() {
         New Patient
       </NavLink>
       <Outlet />
-    </>
+    </div>
   );
 }

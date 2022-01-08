@@ -1,5 +1,10 @@
 @import "styles/settings/spacing";
 
+.PatientsPage {
+  padding: $spacing-2;
+}
+
 .patients-page-new-patient-link {
-  margin-left: $spacing-2;
+  display: block;
+  margin-bottom: $spacing-2;
 }
