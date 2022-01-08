@@ -134,6 +134,18 @@
       "gender": "male",
       "spayed_or_neutered": "no",
       "id": 7
+    },
+    {
+      "owner_id": 2,
+      "name": "Gamma",
+      "birth_date": "",
+      "species": "dog",
+      "breed": "",
+      "color": "",
+      "vaccination_status": "current",
+      "gender": "male",
+      "spayed_or_neutered": "no",
+      "id": 8
     }
   ]
 }
