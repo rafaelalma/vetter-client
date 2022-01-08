@@ -2,6 +2,7 @@ import { Button } from "components/buttons";
 import useFetch from "hooks/useFetch.hook";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import ExistingPetModal from "./ExistingPetModal/ExistingPetModal";
 import NewPetModal from "./NewPetModal/NewPetModal";
 import OwnerContact from "./OwnerContact/OwnerContact";
 import "./OwnerDetailsPage.scss";
@@ -53,6 +54,8 @@ export default function OwnerDetailsPage() {
       <OwnerContact id={id} />
       <PetsList ownerId={id} pets={pets} setPets={setPets} />
       <NewPetModal ownerId={id} setPets={setPets} />
+      {/* TODO: context */}
+      <ExistingPetModal ownerId={id} setPets={setPets} />
       <Button
         onClick={handleDeleteClick}
         disabled={loading}
