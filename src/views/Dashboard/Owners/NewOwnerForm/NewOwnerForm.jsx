@@ -39,7 +39,7 @@ export default function NewOwnerForm({ onNewOwnerSubmit }) {
         if (onNewOwnerSubmit) {
           onNewOwnerSubmit(data.id);
         } else {
-          navigate("/dashboard/owners");
+          navigate(`/dashboard/owners/${data.id}`);
         }
       } catch (error) {
         setLoading(false);

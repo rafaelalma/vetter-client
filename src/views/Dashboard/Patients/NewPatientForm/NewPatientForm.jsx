@@ -49,7 +49,7 @@ export default function NewPatientForm({ ownerId, setPets, setShowForm }) {
           setPets((pets) => [...pets, data]);
           setShowForm(false);
         } else {
-          navigate("/dashboard/patients");
+          navigate(`/dashboard/patients/${data.id}`);
         }
       } catch (error) {
         setLoading(false);
