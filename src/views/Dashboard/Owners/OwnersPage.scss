@@ -1,5 +1,10 @@
 @import "styles/settings/spacing";
 
+.OwnersPage {
+  padding: $spacing-2;
+}
+
 .owners-page-new-owner-link {
-  margin-left: $spacing-2;
+  display: block;
+  margin-bottom: $spacing-2;
 }

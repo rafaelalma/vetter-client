@@ -3,7 +3,7 @@ import "./OwnersPage.scss";
 
 export default function OwnersPage() {
   return (
-    <>
+    <div className="OwnersPage">
       <NavLink
         to="/dashboard/owners/new"
         className="link-primary owners-page-new-owner-link"
@@ -11,6 +11,6 @@ export default function OwnersPage() {
         New Owner
       </NavLink>
       <Outlet />
-    </>
+    </div>
   );
 }
