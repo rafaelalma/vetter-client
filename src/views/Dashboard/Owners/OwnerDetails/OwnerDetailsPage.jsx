@@ -2,6 +2,7 @@ import { Button } from "components/buttons";
 import useFetch from "hooks/useFetch.hook";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import NewPetModal from "./NewPetModal/NewPetModal";
 import OwnerContact from "./OwnerContact/OwnerContact";
 import "./OwnerDetailsPage.scss";
 import PetsList from "./PetsList/PetsList";
@@ -50,6 +51,7 @@ export default function OwnerDetailsPage() {
     <div className="OwnerDetailsPage">
       <OwnerContact id={id} />
       <PetsList ownerId={id} />
+      <NewPetModal />
       <Button
         onClick={handleDeleteClick}
         disabled={loading}
