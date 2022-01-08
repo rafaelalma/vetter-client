@@ -56,6 +56,7 @@ export default function NewOwnerForm({ onNewOwnerSubmit }) {
         required
         value={firstName}
         onChange={(event) => setFirstName(event.target.value)}
+        autoFocus
       />
       <Input
         placeholder="Last Name"

@@ -61,6 +61,7 @@ export default function SignUpForm() {
         required
         value={firstName}
         onChange={(event) => setFirsName(event.target.value)}
+        autoFocus
       />
       <Input
         placeholder="Last Name"

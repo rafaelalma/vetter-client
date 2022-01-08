@@ -66,6 +66,7 @@ export default function NewPatientForm({ ownerId, setPets, setShowForm }) {
         required
         value={name}
         onChange={(event) => setName(event.target.value)}
+        autoFocus
       />
       <Input
         placeholder="Birth Date"

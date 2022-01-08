@@ -29,6 +29,7 @@ export default function ForgotPasswordForm() {
         type="email"
         value={email}
         onChange={(event) => setEmail(event.target.value)}
+        autoFocus
       />
       <Button type="submit">Send Email</Button>
     </form>

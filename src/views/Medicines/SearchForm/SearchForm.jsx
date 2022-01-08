@@ -18,6 +18,7 @@ export default function SearchForm() {
         placeholder="Search"
         value={search}
         onChange={(event) => setSearch(event.target.value)}
+        autoFocus
       />
       <Button type="submit">Search</Button>
     </form>

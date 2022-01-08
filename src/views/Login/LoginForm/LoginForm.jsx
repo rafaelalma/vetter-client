@@ -91,6 +91,7 @@ export default function LoginForm() {
         type="email"
         value={email}
         onChange={(event) => setEmail(event.target.value)}
+        autoFocus
       />
       <Input
         placeholder="Password"
