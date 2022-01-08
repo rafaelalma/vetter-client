@@ -3,6 +3,7 @@ import { Input } from "components/forms";
 import useFetch from "hooks/useFetch.hook";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { SERVER } from "services/settings";
 import "./NewPatientForm.scss";
 
 export default function NewPatientForm({ ownerId, setPets, setShowForm }) {
@@ -17,7 +18,7 @@ export default function NewPatientForm({ ownerId, setPets, setShowForm }) {
 
   const [loading, setLoading] = useState(false);
 
-  const { post } = useFetch("http://localhost:3001/");
+  const { post } = useFetch(SERVER);
 
   const navigate = useNavigate();
 

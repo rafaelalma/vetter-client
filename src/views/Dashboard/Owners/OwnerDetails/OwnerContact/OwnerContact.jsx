@@ -3,13 +3,14 @@ import useFetch from "hooks/useFetch.hook";
 import useFirstTimeGetSet from "hooks/useFirstTimeGetSet.hook";
 import propTypes from "prop-types";
 import { useState } from "react";
+import { SERVER } from "services/settings";
 import "./OwnerContact.scss";
 
 export default function OwnerContact({ id }) {
   const [contact, setContact] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const { get } = useFetch("http://localhost:3001/");
+  const { get } = useFetch(SERVER);
 
   useFirstTimeGetSet(
     get,

@@ -4,6 +4,7 @@ import { AuthenticationContext } from "context/authentication/AuthenticationCont
 import useFetch from "hooks/useFetch.hook";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { SERVER } from "services/settings";
 import "./LoginForm.scss";
 
 export default function LoginForm() {
@@ -12,7 +13,7 @@ export default function LoginForm() {
 
   const [loading, setLoading] = useState(false);
 
-  const { get } = useFetch("http://localhost:3001/");
+  const { get } = useFetch(SERVER);
 
   const context = useContext(AuthenticationContext);
 

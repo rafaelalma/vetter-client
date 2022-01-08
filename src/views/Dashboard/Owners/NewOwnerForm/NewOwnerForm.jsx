@@ -3,6 +3,7 @@ import { Input } from "components/forms";
 import useFetch from "hooks/useFetch.hook";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { SERVER } from "services/settings";
 import "./NewOwnerForm.scss";
 
 export default function NewOwnerForm({ onNewOwnerSubmit }) {
@@ -13,7 +14,7 @@ export default function NewOwnerForm({ onNewOwnerSubmit }) {
 
   const [loading, setLoading] = useState(false);
 
-  const { post } = useFetch("http://localhost:3001/");
+  const { post } = useFetch(SERVER);
 
   const navigate = useNavigate();
 

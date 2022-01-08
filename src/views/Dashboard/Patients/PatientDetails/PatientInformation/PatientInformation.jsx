@@ -2,13 +2,14 @@ import { Loader } from "components/loaders";
 import useFetch from "hooks/useFetch.hook";
 import useFirstTimeGetSet from "hooks/useFirstTimeGetSet.hook";
 import { useEffect, useState } from "react";
+import { SERVER } from "services/settings";
 import "./PatientInformation.scss";
 
 export default function PatientInformation({ id, setOwnerId }) {
   const [information, setInformation] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const { get } = useFetch("http://localhost:3001/");
+  const { get } = useFetch(SERVER);
 
   useFirstTimeGetSet(
     get,

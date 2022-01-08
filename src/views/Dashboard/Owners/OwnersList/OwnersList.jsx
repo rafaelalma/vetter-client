@@ -2,6 +2,7 @@ import { Loader } from "components/loaders";
 import useFetch from "hooks/useFetch.hook";
 import useFirstTimeGetSet from "hooks/useFirstTimeGetSet.hook";
 import { useState } from "react";
+import { SERVER } from "services/settings";
 import OwnerCard from "./OwnerCard/OwnerCard";
 import "./OwnersList.scss";
 
@@ -9,7 +10,7 @@ export default function OwnersList({ btnAdd, onAddOwnerClick }) {
   const [owners, setOwners] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const { get } = useFetch("http://localhost:3001/");
+  const { get } = useFetch(SERVER);
 
   useFirstTimeGetSet(get, "owners", setOwners, setLoading, "Owners");
 

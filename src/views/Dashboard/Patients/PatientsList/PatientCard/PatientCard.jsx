@@ -2,6 +2,7 @@ import { Button } from "components/buttons";
 import useFetch from "hooks/useFetch.hook";
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { SERVER } from "services/settings";
 import "./PatientCard.scss";
 
 export default function PatientCard({
@@ -13,7 +14,7 @@ export default function PatientCard({
 }) {
   const { id, name } = patient;
 
-  const { patch } = useFetch("http://localhost:3001/");
+  const { patch } = useFetch(SERVER);
 
   const handleAddPetClick = () => {
     (async () => {

@@ -2,6 +2,7 @@ import { Button } from "components/buttons";
 import useFetch from "hooks/useFetch.hook";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { SERVER } from "services/settings";
 import ExistingOwnerModal from "./ExistingOwnerModal/ExistingOwnerModal";
 import NewOwnerModal from "./NewOwnerModal/NewOwnerModal";
 import OwnerInformation from "./OwnerInformation/OwnerInformation";
@@ -16,7 +17,7 @@ export default function PatientDetailsPage() {
 
   const navigate = useNavigate();
 
-  const { del } = useFetch("http://localhost:3001/");
+  const { del } = useFetch(SERVER);
 
   const id = Number.parseInt(params.id, 10);
 

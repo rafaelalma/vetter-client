@@ -1,12 +1,13 @@
 import { Button } from "components/buttons";
 import useFetch from "hooks/useFetch.hook";
 import { useState } from "react";
+import { SERVER } from "services/settings";
 import NewOwnerForm from "views/Dashboard/Owners/NewOwnerForm/NewOwnerForm";
 
 export default function NewOwnerModal({ patientId, setOwnerId }) {
   const [showForm, setShowForm] = useState(false);
 
-  const { patch } = useFetch("http://localhost:3001/");
+  const { patch } = useFetch(SERVER);
 
   const handleNewOwnerClick = () => {
     setShowForm((showForm) => !showForm);

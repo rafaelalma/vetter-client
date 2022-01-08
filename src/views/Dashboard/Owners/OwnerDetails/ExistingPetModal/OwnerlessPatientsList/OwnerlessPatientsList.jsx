@@ -2,6 +2,7 @@ import { Loader } from "components/loaders";
 import useFetch from "hooks/useFetch.hook";
 import useFirstTimeGetSet from "hooks/useFirstTimeGetSet.hook";
 import { useState } from "react";
+import { SERVER } from "services/settings";
 import PatientCard from "views/Dashboard/Patients/PatientsList/PatientCard/PatientCard";
 import "./OwnerlessPatientsList.scss";
 
@@ -13,7 +14,7 @@ export default function OwnerlessPatientsList({
   const [ownerlessPatients, setOwnerlessPatients] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const { get } = useFetch("http://localhost:3001/");
+  const { get } = useFetch(SERVER);
 
   useFirstTimeGetSet(
     get,
