@@ -16,11 +16,13 @@ export default function PatientsList() {
 
   return loading ? (
     <Loader />
-  ) : (
+  ) : patients.length > 0 ? (
     <ul className="PatientsList">
       {patients.map((patient) => (
         <PatientCard key={patient.id} patient={patient} />
       ))}
     </ul>
+  ) : (
+    <p>No patients</p>
   );
 }

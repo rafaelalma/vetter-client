@@ -16,7 +16,7 @@ export default function OwnersList({ btnAdd, onAddOwnerClick }) {
 
   return loading ? (
     <Loader />
-  ) : (
+  ) : owners.length > 0 ? (
     <ul className="OwnersList">
       {owners.map((owner) => (
         <OwnerCard
@@ -27,5 +27,7 @@ export default function OwnersList({ btnAdd, onAddOwnerClick }) {
         />
       ))}
     </ul>
+  ) : (
+    <p>No owners</p>
   );
 }

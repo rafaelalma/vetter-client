@@ -22,12 +22,14 @@ export default function PetsList({ ownerId, pets, setPets }) {
 
   return loading ? (
     <Loader />
-  ) : (
+  ) : pets.length > 0 ? (
     <ul className="PetsList">
       {pets.map((pet) => (
         <PetCard key={pet.id} pet={pet} />
       ))}
     </ul>
+  ) : (
+    <p>No pets</p>
   );
 }
 
