@@ -1,0 +1,9 @@
+@import "styles/settings/spacing";
+
+.OwnerlessPatientsList {
+  padding: $spacing-2;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-1;
+}
