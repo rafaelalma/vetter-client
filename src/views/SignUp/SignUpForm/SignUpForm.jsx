@@ -24,7 +24,7 @@ export default function SignUpForm() {
   const handleSignUpSubmit = (event) => {
     event.preventDefault();
 
-    const newVet = {
+    const newAdmin = {
       first_name: firstName,
       last_name: lastName,
       address,
@@ -37,8 +37,8 @@ export default function SignUpForm() {
       try {
         setLoading(true);
 
-        const data = await post("vets", newVet);
-        console.log("Post vet", data);
+        const data = await post("admins", newAdmin);
+        console.log("Post admin", data);
 
         setLoading(false);
 
