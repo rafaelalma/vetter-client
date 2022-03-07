@@ -15,8 +15,8 @@ export default function DashboardPage() {
           </li>
           <li>
             <h2>
-              <NavLink className="link-accent" to="/dashboard/patients">
-                Patients
+              <NavLink className="link-accent" to="/dashboard/pets">
+                Pets
               </NavLink>
             </h2>
           </li>

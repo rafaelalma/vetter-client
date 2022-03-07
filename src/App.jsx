@@ -7,10 +7,10 @@ import NewOwnerForm from "views/Dashboard/Owners/NewOwnerForm/NewOwnerForm";
 import OwnerDetailsPage from "views/Dashboard/Owners/OwnerDetails/OwnerDetailsPage";
 import OwnersList from "views/Dashboard/Owners/OwnersList/OwnersList";
 import OwnersPage from "views/Dashboard/Owners/OwnersPage";
-import NewPatientForm from "views/Dashboard/Patients/NewPatientForm/NewPatientForm";
-import PatientDetailsPage from "views/Dashboard/Patients/PatientDetails/PatientDetailsPage";
-import PatientsList from "views/Dashboard/Patients/PatientsList/PatientsList";
-import PatientsPage from "views/Dashboard/Patients/PatientsPage";
+import NewPetForm from "views/Dashboard/Pets/NewPetForm/NewPetForm";
+import PetDetailsPage from "views/Dashboard/Pets/PetDetails/PetDetailsPage";
+import PetsList from "views/Dashboard/Pets/PetsList/PetsList";
+import PetsPage from "views/Dashboard/Pets/PetsPage";
 import SummaryPage from "views/Dashboard/Summary/SummaryPage";
 import ForgotPasswordPage from "views/ForgotPassword/ForgotPasswordPage";
 import HomePage from "views/Home/HomePage";
@@ -32,10 +32,10 @@ export default function App() {
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/dashboard" element={<DashboardPage />}>
               <Route index element={<SummaryPage />} />
-              <Route path="patients" element={<PatientsPage />}>
-                <Route index element={<PatientsList />} />
-                <Route path="new" element={<NewPatientForm />} />
-                <Route path=":id" element={<PatientDetailsPage />} />
+              <Route path="pets" element={<PetsPage />}>
+                <Route index element={<PetsList />} />
+                <Route path="new" element={<NewPetForm />} />
+                <Route path=":id" element={<PetDetailsPage />} />
               </Route>
               <Route path="owners" element={<OwnersPage />}>
                 <Route index element={<OwnersList />} />

@@ -7,7 +7,7 @@ export default function PetCard({ pet }) {
 
   return (
     <li className="PetCard">
-      <Link to={`/dashboard/patients/${id}`}>
+      <Link to={`/dashboard/pets/${id}`}>
         <img src="" alt="" width="100" height="100" className="pet-card-img" />
       </Link>
       <h3>{name}</h3>
@@ -16,7 +16,7 @@ export default function PetCard({ pet }) {
 }
 
 PetCard.propTypes = {
-  patient: propTypes.shape({
+  pet: propTypes.shape({
     name: propTypes.string.isRequired,
   }),
 };

@@ -5,7 +5,7 @@ export default function SummaryPage() {
     <div className="SummaryPage">
       <h3>Treatments</h3>
       <h3>Vaccines</h3>
-      <h3>Latest Patients</h3>
+      <h3>Latest Pets</h3>
       <h3>Latest Owners</h3>
     </div>
   );

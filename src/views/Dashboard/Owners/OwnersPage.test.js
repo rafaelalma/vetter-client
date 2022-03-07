@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import OwnersPage from "./OwnersPage";
 
 describe("OwnersPage", () => {
-  it("should render New Patient link", () => {
+  it("should render New Pet link", () => {
     render(<OwnersPage />, { wrapper: BrowserRouter });
     const linkElement = screen.getByRole("link", {
       name: "New Owner",

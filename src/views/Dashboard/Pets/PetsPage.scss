@@ -1,0 +1,10 @@
+@import "styles/settings/spacing";
+
+.PetsPage {
+  padding: $spacing-2;
+}
+
+.pets-page-new-pet-link {
+  display: block;
+  margin-bottom: $spacing-2;
+}

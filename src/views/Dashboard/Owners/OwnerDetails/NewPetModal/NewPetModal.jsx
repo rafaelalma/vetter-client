@@ -1,6 +1,6 @@
 import { Button } from "components/buttons";
 import { useState } from "react";
-import NewPatientForm from "views/Dashboard/Patients/NewPatientForm/NewPatientForm";
+import NewPetForm from "views/Dashboard/Pets/NewPetForm/NewPetForm";
 
 export default function NewPetModal({ ownerId, setPets }) {
   const [showForm, setShowForm] = useState(false);
@@ -15,7 +15,7 @@ export default function NewPetModal({ ownerId, setPets }) {
         {showForm ? "Cancel" : "Add New Pet"}
       </Button>
       {showForm && (
-        <NewPatientForm
+        <NewPetForm
           ownerId={ownerId}
           setPets={setPets}
           setShowForm={setShowForm}

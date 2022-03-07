@@ -1,6 +1,6 @@
 import { Button } from "components/buttons";
 import { useState } from "react";
-import OwnerlessPatientsList from "./OwnerlessPatientsList/OwnerlessPatientsList";
+import OwnerlessPetsList from "./OwnerlessPetsList/OwnerlessPetsList";
 
 export default function ExistingPetModal({ ownerId, setPets }) {
   const [showList, setShowList] = useState(false);
@@ -15,7 +15,7 @@ export default function ExistingPetModal({ ownerId, setPets }) {
         {showList ? "Cancel" : "Add Existing Pet"}
       </Button>
       {showList && (
-        <OwnerlessPatientsList
+        <OwnerlessPetsList
           ownerId={ownerId}
           setPets={setPets}
           setShowList={setShowList}

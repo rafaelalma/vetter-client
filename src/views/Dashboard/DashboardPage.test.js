@@ -11,10 +11,10 @@ describe("DashboardPage", () => {
     expect(linkElement).toBeInTheDocument();
   });
 
-  it("should render Patients link", () => {
+  it("should render Pets link", () => {
     render(<DashboardPage />, { wrapper: BrowserRouter });
     const linkElement = screen.getByRole("link", {
-      name: "Patients",
+      name: "Pets",
     });
     expect(linkElement).toBeInTheDocument();
   });
@@ -31,7 +31,7 @@ describe("DashboardPage", () => {
     // TODO
   });
 
-  xit("should render Patients Page in patients route", () => {
+  xit("should render Pets Page in pets route", () => {
     // TODO
   });
 
