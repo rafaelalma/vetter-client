@@ -15,8 +15,6 @@ import SummaryPage from "views/Dashboard/Summary/SummaryPage";
 import ForgotPasswordPage from "views/ForgotPassword/ForgotPasswordPage";
 import HomePage from "views/Home/HomePage";
 import LoginPage from "views/Login/LoginPage";
-import MedicinesPage from "views/Medicines/MedicinesPage";
-import SearchForm from "views/Medicines/SearchForm/SearchForm";
 import NotFoundPage from "views/NotFound/NotFoundPage";
 import SignUpPage from "views/SignUp/SignUpPage";
 import "./App.scss";
@@ -44,12 +42,6 @@ export default function App() {
                 <Route path="new" element={<NewOwnerForm />} />
                 <Route path=":id" element={<OwnerDetailsPage />} />
               </Route>
-            </Route>
-            <Route path="/medicines" element={<MedicinesPage />}>
-              <Route index element={null} />
-              <Route path="saved" element={null} />
-              <Route path="categories" element={null} />
-              <Route path="search" element={<SearchForm />} />
             </Route>
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

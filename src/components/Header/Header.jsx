@@ -31,9 +31,6 @@ export default function Header() {
       <li>
         <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
-      <li>
-        <NavLink to="/medicines">Medicines</NavLink>
-      </li>
     </>
   );
 

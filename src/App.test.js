@@ -33,10 +33,6 @@ describe("App", () => {
     // TODO
   });
 
-  xit("should render Medicines Page in medicines route", () => {
-    // TODO
-  });
-
   xit("should render Not Found Page in catch all route", () => {
     // TODO
   });

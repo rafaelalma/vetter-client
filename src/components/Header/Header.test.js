@@ -51,11 +51,10 @@ describe("Header", () => {
     expect(screen.getByRole("link", { name: "Sign Up" })).toBeInTheDocument();
   });
 
-  it("should render Dashboard and Medicines links if the user is logged in", () => {
+  it("should render Dashboard link if the user is logged in", () => {
     render(<Header />, { wrapper: Wrapper });
     const button = screen.getByRole("button", { name: "Login" });
     fireEvent.click(button);
     expect(screen.getByRole("link", { name: "Dashboard" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Medicines" })).toBeInTheDocument();
   });
 });
